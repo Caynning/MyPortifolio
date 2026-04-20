@@ -1,17 +1,17 @@
-/* 1. Reset e Ajustes de Página */
+/* 1. Reset e Base da Página */
 .project-page {
     background: #F4F1EA;
     padding-bottom: 100px;
     margin: 0;
     overflow-x: hidden;
+    color: #333;
 }
 
-/* Garante que a sidebar do index não afete esta página */
+/* Limpa interferências do index */
 .project-page main {
     margin-left: 0 !important;
     padding: 0 !important;
     max-width: 100% !important;
-    display: block !important;
 }
 
 .container {
@@ -27,21 +27,27 @@
     border-bottom: 1px solid rgba(0,0,0,0.05);
     display: flex;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .btn-back {
     text-decoration: none;
     color: var(--verde-musgo);
     font-weight: 800;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.btn-back:hover { color: var(--vermelho-terra); }
+.btn-back:hover { color: var(--vermelho-terra); transform: translateX(-5px); }
 
-/* 3. Hero Area (Ajuste de textos) */
+/* 3. Hero Area (Título e Categoria) */
 .project-hero {
     padding: 60px 0 40px;
     text-align: center;
@@ -56,230 +62,165 @@
     font-size: 0.7rem;
     font-weight: 800;
     text-transform: uppercase;
+    display: inline-block;
 }
 
 .project-hero h1 {
-    font-size: clamp(2rem, 5vw, 3.2rem); /* Tamanho fluido */
+    font-size: clamp(2rem, 5vw, 3.2rem);
     color: var(--verde-musgo);
-    margin: 20px 0 10px;
-    line-height: 1.2;
+    margin: 15px 0 5px;
+    line-height: 1.1;
 }
 
 .subtitle {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     opacity: 0.7;
     font-family: 'Gaegu', cursive;
+    color: var(--verde-musgo);
 }
 
-/* 4. Banner Principal (Onde estava o borrão) */
-.banner-destaque {
-    margin: -30px auto 60px; /* Sobe um pouco para interagir com o hero */
-    text-align: center;
-    max-width: 950px;
-}
-
-.label-view {
-    font-family: 'Gaegu';
-    font-size: 1.3rem;
-    color: var(--vermelho-terra);
-    margin-bottom: 15px;
-}
-
-.banner-destaque img {
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-    display: block;
-    /* Melhora a nitidez em alguns navegadores */
-    image-rendering: -webkit-optimize-contrast; 
-}
-
-/* 5. Grid de Conteúdo */
-.project-grid-layout {
+/* 4. Layout Principal (Grid Dinâmico) */
+.main-project-grid {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr; /* Coluna de texto um pouco maior */
+    grid-template-columns: 1fr 1.2fr; /* Banner esquerda, Texto direita */
     gap: 50px;
+    margin-top: 40px;
     align-items: start;
 }
 
+/* Lado Esquerdo: Conteúdo Fixo no Scroll */
+.sticky-content {
+    position: sticky;
+    top: 100px; /* Gruda abaixo do nav */
+}
+
+.main-banner-img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    display: block;
+    image-rendering: -webkit-optimize-contrast;
+    transition: transform 0.5s ease;
+}
+
+.main-banner-img:hover { transform: scale(1.02); }
+
+.target-box-mini {
+    margin-top: 25px;
+    background: var(--verde-musgo);
+    color: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 20px rgba(74, 93, 78, 0.2);
+}
+
+.target-box-mini h4 {
+    color: var(--ocre-suave);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+/* Lado Direito: Storytelling e Detalhes */
 .project-info h3 {
-    font-size: 1.8rem;
-    margin: 40px 0 20px;
+    font-size: 1.6rem;
+    margin: 35px 0 15px;
     color: var(--verde-musgo);
     border-bottom: 2px solid var(--ocre-suave);
     display: inline-block;
 }
 
 .project-info p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
     color: #444;
-    line-height: 1.8;
 }
 
-/* 6. Análise SWOT */
-.swot-grid {
+/* Análise SWOT / FOFA */
+.swot-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin: 25px 0;
+    gap: 12px;
+    margin: 20px 0;
 }
 
-.swot-item {
+.swot-card {
     background: white;
-    padding: 20px;
-    border-radius: 15px;
+    padding: 18px;
+    border-radius: 12px;
+    border-left: 4px solid var(--verde-musgo);
     font-size: 0.9rem;
-    border-top: 4px solid var(--verde-musgo);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.03);
-    line-height: 1.5;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    line-height: 1.4;
 }
 
-.swot-item strong { color: var(--vermelho-terra); }
-
-/* 7. Galeria e Público Alvo */
-.project-gallery h3 {
-    font-size: 1.4rem;
-    margin-bottom: 25px;
+.swot-card strong {
+    color: var(--vermelho-terra);
+    display: block;
+    margin-bottom: 5px;
 }
 
-.gallery-img {
-    width: 100%;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-
-.gallery-img:hover { transform: scale(1.02); }
-
-/* Público Alvo com mais destaque */
-.target-box {
-    background: var(--verde-musgo);
-    color: white;
-    padding: 30px;
-    border-radius: 25px;
-    margin-bottom: 30px; /* Movi para cima das fotos no layout se quiser */
-    position: relative;
-}
-
-.target-box h4 {
-    color: var(--ocre-suave);
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
-
-.target-box p {
-    font-size: 1rem;
-    line-height: 1.6;
-    opacity: 0.9;
-}
-
-/* 8. Checklist */
+/* Checklist de Entregáveis */
 .check-list {
     list-style: none;
     padding: 0;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 .check-list li {
-    padding: 12px 0;
-    border-bottom: 1px dashed #ccc;
+    padding: 12px 15px;
+    background: white;
+    margin-bottom: 8px;
+    border-radius: 10px;
     font-weight: 600;
+    font-size: 0.95rem;
     display: flex;
     align-items: center;
+    gap: 12px;
+    border: 1px solid rgba(0,0,0,0.03);
 }
 
 .check-list li::before {
-    content: "→";
+    content: "✓";
     color: var(--vermelho-terra);
-    margin-right: 15px;
+    font-weight: 900;
 }
 
-/* 9. Responsividade */
-@media (max-width: 900px) {
-    .project-grid-layout {
-        grid-template-columns: 1fr;
-    }
-    .project-hero h1 { font-size: 2.5rem; }
-}
-
-/* Novo Grid Principal */
-.main-project-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr; /* Banner na esquerda, texto na direita */
-    gap: 60px;
-    margin-top: 40px;
-    align-items: start;
-}
-
-/* Deixa o banner fixo enquanto rola o texto */
-.sticky-content {
-    position: sticky;
-    top: 40px;
-}
-
-.main-banner-img {
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-}
-
-/* Cards da SWOT mais limpos */
-.swot-card {
-    background: white;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    border-left: 4px solid var(--verde-musgo);
-    font-size: 0.9rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
-}
-
-/* Galeria de imagens do processo menores */
+/* Galeria de Processo (Abaixo do texto) */
 .process-gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .img-processo {
     width: 100%;
-    height: 150px;
+    height: 180px;
     object-fit: cover;
-    border-radius: 10px;
-    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
     transition: 0.3s;
+    cursor: zoom-in;
 }
 
 .img-processo:hover { transform: scale(1.05); }
 
-/* Caixa de Público Alvo menorzinha junto ao banner */
-.target-box-mini {
-    margin-top: 30px;
-    background: var(--verde-musgo);
-    color: white;
-    padding: 20px;
-    border-radius: 15px;
-}
-
-.target-box-mini h4 {
-    color: var(--ocre-suave);
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
-
-/* Responsividade: No celular vira uma coluna só */
-@media (max-width: 850px) {
+/* 5. Responsividade */
+@media (max-width: 900px) {
     .main-project-grid {
         grid-template-columns: 1fr;
     }
+    
     .sticky-content {
         position: relative;
         top: 0;
+    }
+    
+    .project-hero h1 { font-size: 2.2rem; }
+    
+    .swot-container {
+        grid-template-columns: 1fr;
     }
 }
