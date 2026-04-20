@@ -56,16 +56,20 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.5rem; /* Diminuí um pouco o espaço para caber tudo */
+    align-items: flex-start; /* Alinha os textos à esquerda */
+    padding-left: 1rem;
 }
 
 .nav-link {
     color: rgba(255,255,255,0.7);
     text-decoration: none;
-    font-size: 1.3rem;
-    padding: 0.6rem 1rem;
+    font-size: 1.2rem; /* Tamanho levemente ajustado */
+    padding: 0.5rem 1rem;
     border-radius: 12px;
     transition: all 0.3s ease;
+    width: 100%; /* Garante que o hover pegue a linha toda */
+    text-align: left;
 }
 
 .nav-link:hover {
@@ -79,19 +83,19 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background: var(--branco);
-    color: var(--verde-musgo);
+    background-color: var(--branco) !important; /* Fundo sempre branco */
+    color: var(--verde-musgo) !important; /* Texto sempre verde */
     padding: 1rem;
     border-radius: 15px;
-    font-weight: 700;
+    font-weight: 800; /* Mais negrito para ler melhor */
     font-size: 0.9rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
 }
-
 .btn-download:hover {
-    background: var(--vermelho-terra);
-    color: var(--branco);
-    transform: scale(1.05);
+    background-color: var(--vermelho-terra) !important; /* Fundo vermelho no hover */
+    color: var(--branco) !important; /* Texto branco no hover */
+    transform: scale(1.02);
 }
 
 /* 2. Conteúdo Principal */
