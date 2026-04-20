@@ -44,11 +44,14 @@
 }
 
 .subtitle {
-    font-size: 10px;
+    font-size: 11px;             /* Aumentamos um tiquinho */
     text-transform: uppercase;
-    letter-spacing: 2px;
-    opacity: 0.7;
-    font-weight: 700;
+    letter-spacing: 2.5px;       /* Espaçamento maior para um ar mais premium */
+    color: var(--branco);        /* Forçamos o branco puro */
+    opacity: 0.9;                /* Quase total, mas ainda com um toque de design */
+    font-weight: 800;            /* Mais peso para destacar no fundo escuro */
+    display: block;              /* Garante que ele respeite as margens */
+    margin-top: 4px;
 }
 
 /* Navegação da Sidebar */

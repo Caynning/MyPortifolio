@@ -32,6 +32,42 @@ const projetos = {
     corDestaque: "#4A5D4E" 
 },
 
+'fotografia-pb': {
+    titulo: "Luz e Sombra: Exercícios de Fotografia Mobile",
+    categoria: "Estudo de Composição Visual",
+    cliente: "Acadêmico (Aula de Fotografia)",
+    papel: "Fotógrafa e Editora",
+    corDestaque: "#222222",
+    
+    estrategiaVisual: `O desafio deste projeto foi capturar a essência de objetos e cenários cotidianos utilizando apenas dispositivos móveis e a ausência de cores. Sem a distração da paleta cromática, o foco voltou-se totalmente para a **textura, o contraste e a geometria**. As fotos em preto e branco exigem um olhar atento à iluminação natural e à composição, transformando o comum em narrativas visuais dramáticas e minimalistas.`,
+
+    descricao: `Trabalho prático realizado para a disciplina de Fotografia, com a premissa de utilizar **smartphones** para explorar o PB (Preto e Branco). O exercício visava aprimorar a percepção de volume e profundidade através da luz.`,
+
+    analise: {
+        publico: "Apreciadores de fotografia minimalista e direção de arte.",
+        insights: "A fotografia mobile, quando aplicada com técnica de composição (regra dos terços, linhas guias), entrega resultados profissionais e expressivos."
+    },
+
+    entregáveis: [
+        "Captação de imagens in loco",
+        "Edição e tratamento de contraste em PB",
+        "Curadoria de série fotográfica",
+        "Estudo de iluminação natural e sombras"
+    ],
+    
+    bannerPrincipal: "img/foto_destaque_pb.jpg", // Escolha a sua favorita para ser a capa
+    
+    // AQUI ESTÁ A SUA LISTA LONGA DE FOTOS
+    imagens: [
+        "img/fotografia/foto1.jpg",
+        "img/fotografia/foto2.jpg",
+        "img/fotografia/foto3.jpg",
+        "img/fotografia/foto4.jpg",
+        "img/fotografia/foto5.jpg",
+        "img/fotografia/foto6.jpg"
+    ]
+},
+
     'carnaval': {
         titulo: "Carnaval: Bloco da Folia",
         categoria: "Jovem Aprendiz",
