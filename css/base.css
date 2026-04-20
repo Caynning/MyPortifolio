@@ -1,0 +1,91 @@
+/* BASE.CSS - O Esqueleto do Portfólio */
+
+/* 1. Variáveis Globais */
+:root {
+    --verde-musgo: #4A5D4E;
+    --vermelho-terra: #A64444;
+    --bege-papel: #F4F1EA;
+    --ocre-suave: #D9B48F;
+    --branco: #FFFFFF;
+    --preto-opaco: rgba(0, 0, 0, 0.05);
+    --shadow-soft: 0 10px 30px rgba(74, 93, 78, 0.08);
+    --font-main: 'Nunito', sans-serif;
+    --font-title: 'Gaegu', cursive;
+}
+
+/* 2. Reset de Navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* 3. Estilos Base do Corpo */
+body {
+    background-color: var(--bege-papel);
+    color: var(--verde-musgo);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* 4. Tipografia Padrão */
+h1, h2, h3, h4, .font-handwritten {
+    font-family: var(--font-title);
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* 5. Utilitários Comuns (O que você mais usa) */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.line {
+    height: 1px;
+    flex-grow: 1;
+    background: var(--ocre-suave);
+    opacity: 0.4;
+}
+
+.badge {
+    background: rgba(166, 68, 68, 0.1);
+    color: var(--vermelho-terra);
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 6. Animações Globais */
+.float-anim {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
