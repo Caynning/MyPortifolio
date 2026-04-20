@@ -31,43 +31,38 @@ const projetos = {
     imagens: ["img/IMGCoke.jpeg", "img/img3Coke.jpeg"], 
     corDestaque: "#4A5D4E" 
 },
-
-'fotografia-pb': {
-    titulo: "Luz e Sombra: Exercícios de Fotografia Mobile",
-    categoria: "Estudo de Composição Visual",
-    cliente: "Acadêmico (Aula de Fotografia)",
-    papel: "Fotógrafa e Editora",
-    corDestaque: "#222222",
+'fotografia': {
+    titulo: "Luz e Sombra: Exercícios de Composição",
+    categoria: "Aula de Fotografia",
+    cliente: "Centro Universitário FAM",
+    papel: "Fotógrafa e Editora Mobile",
+    objetivo: "Explorar a narrativa visual através do alto contraste e da ausência de cores.",
     
-    estrategiaVisual: `O desafio deste projeto foi capturar a essência de objetos e cenários cotidianos utilizando apenas dispositivos móveis e a ausência de cores. Sem a distração da paleta cromática, o foco voltou-se totalmente para a **textura, o contraste e a geometria**. As fotos em preto e branco exigem um olhar atento à iluminação natural e à composição, transformando o comum em narrativas visuais dramáticas e minimalistas.`,
+    estrategiaVisual: `Neste exercício acadêmico, o desafio foi despir a imagem de cores para focar exclusivamente na composição, texturas e no jogo de luz e sombra. Utilizando apenas dispositivos móveis, explorei ângulos que transformam objetos cotidianos em formas artísticas, mantendo uma estética Noir e minimalista que ressalta a profundidade de cada cena.`,
 
-    descricao: `Trabalho prático realizado para a disciplina de Fotografia, com a premissa de utilizar **smartphones** para explorar o PB (Preto e Branco). O exercício visava aprimorar a percepção de volume e profundidade através da luz.`,
-
+    descricao: `O projeto consistiu na captura e edição de fotografias em preto e branco. O objetivo principal foi treinar o "olhar publicitário", onde a composição deve guiar o espectador sem a distração das cores, utilizando recursos técnicos limitados (smartphone) para extrair o máximo de expressividade.`,
+    
     analise: {
-        publico: "Apreciadores de fotografia minimalista e direção de arte.",
-        insights: "A fotografia mobile, quando aplicada com técnica de composição (regra dos terços, linhas guias), entrega resultados profissionais e expressivos."
+        publico: "Apreciadores de artes visuais e curadoria de conteúdo mobile.",
+        insights: "A fotografia em P&B força o designer a entender melhor o contraste, algo fundamental para criar peças gráficas equilibradas."
     },
 
     entregáveis: [
-        "Captação de imagens in loco",
-        "Edição e tratamento de contraste em PB",
-        "Curadoria de série fotográfica",
-        "Estudo de iluminação natural e sombras"
+        "Captação de imagens autorais (Outdoor/Indoor)",
+        "Edição e tratamento de imagem mobile",
+        "Estudo de enquadramento e regra dos terços",
+        "Curadoria de portfólio fotográfico"
     ],
     
-    bannerPrincipal: "img/foto_destaque_pb.jpg", // Escolha a sua favorita para ser a capa
-    
-    // AQUI ESTÁ A SUA LISTA LONGA DE FOTOS
+    bannerPrincipal: "img/foto4.jpeg", // Escolha a sua foto favorita para ser a capa
     imagens: [
-        "img/fotografia/foto1.jpg",
-        "img/fotografia/foto2.jpg",
-        "img/fotografia/foto3.jpg",
-        "img/fotografia/foto4.jpg",
-        "img/fotografia/foto5.jpg",
-        "img/fotografia/foto6.jpg"
-    ]
+        "img/foto1.jpeg",
+        "img/foto3.jpeg",
+        "img/foto4.jpeg",
+        "img/foto2.jpeg"
+    ],
+    corDestaque: "#222222" // Um cinza quase preto para combinar com o tema P&B
 },
-
     'carnaval': {
         titulo: "Carnaval: Bloco da Folia",
         categoria: "Jovem Aprendiz",
