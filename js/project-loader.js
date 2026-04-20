@@ -27,8 +27,8 @@ window.onload = function() {
                             <div class="content-block" style="background: rgba(166, 68, 68, 0.05); padding: 25px; border-radius: 20px; border-left: 6px solid #A64444; margin-top: 25px;">
                                 <h4 style="color: #A64444; margin-bottom: 10px; font-family: 'Gaegu', cursive; font-size: 1.5rem;">Minha Atuação</h4>
                                 <p style="font-size: 0.95rem; line-height: 1.6;">
-                                    Como integrante do time criativo, fui a <strong>responsável direta pela concepção visual, layout e edição do banner final</strong>. 
-                                    Utilizei os insights extraídos da Matriz SWOT para criar uma peça que comunica sustentabilidade e modernidade.
+                                    <strong>${data.papel}</strong><br>
+                                    Fui a responsável direta pela concepção visual, layout e edição do banner final, aplicando conceitos de design para facilitar a compreensão dos dados.
                                 </p>
                             </div>
 
@@ -46,13 +46,11 @@ window.onload = function() {
                             <p>${data.descricao}</p>
                         </div>
 
-                        <div class="content-block">
-                            <h3>Análise SWOT (Matriz FOFA)</h3>
-                            <div class="swot-list">
-                                ${data.analise.swot.map(item => `
-                                    <div class="swot-card">${item}</div>
-                                `).join('')}
-                            </div>
+                        <div class="content-block" style="background: #fff; padding: 30px; border-radius: 24px; box-shadow: var(--shadow-soft);">
+                            <h3 style="color: var(--verde-musgo);">Reposicionamento e Estratégia Visual</h3>
+                            <p style="font-size: 1.1rem; color: #444; line-height: 1.8; margin-top: 15px;">
+                                ${data.estrategiaVisual}
+                            </p>
                         </div>
 
                         <div class="content-block">
