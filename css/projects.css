@@ -1,0 +1,207 @@
+/* 1. Reset e Ajustes de Página */
+.project-page {
+    background: #F4F1EA;
+    padding-bottom: 100px;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Garante que a sidebar do index não afete esta página */
+.project-page main {
+    margin-left: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    display: block !important;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+/* 2. Navegação Superior */
+.project-nav {
+    padding: 20px 5%;
+    background: white;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+}
+
+.btn-back {
+    text-decoration: none;
+    color: var(--verde-musgo);
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn-back:hover { color: var(--vermelho-terra); }
+
+/* 3. Hero Area (Ajuste de textos) */
+.project-hero {
+    padding: 60px 0 40px;
+    text-align: center;
+    background: white;
+}
+
+.badge {
+    background: rgba(166, 68, 68, 0.1);
+    color: var(--vermelho-terra);
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.project-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem); /* Tamanho fluido */
+    color: var(--verde-musgo);
+    margin: 20px 0 10px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.7;
+    font-family: 'Gaegu', cursive;
+}
+
+/* 4. Banner Principal (Onde estava o borrão) */
+.banner-destaque {
+    margin: -30px auto 60px; /* Sobe um pouco para interagir com o hero */
+    text-align: center;
+    max-width: 950px;
+}
+
+.label-view {
+    font-family: 'Gaegu';
+    font-size: 1.3rem;
+    color: var(--vermelho-terra);
+    margin-bottom: 15px;
+}
+
+.banner-destaque img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    display: block;
+    /* Melhora a nitidez em alguns navegadores */
+    image-rendering: -webkit-optimize-contrast; 
+}
+
+/* 5. Grid de Conteúdo */
+.project-grid-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* Coluna de texto um pouco maior */
+    gap: 50px;
+    align-items: start;
+}
+
+.project-info h3 {
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+    color: var(--verde-musgo);
+    border-bottom: 2px solid var(--ocre-suave);
+    display: inline-block;
+}
+
+.project-info p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.8;
+}
+
+/* 6. Análise SWOT */
+.swot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.swot-item {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    border-top: 4px solid var(--verde-musgo);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+    line-height: 1.5;
+}
+
+.swot-item strong { color: var(--vermelho-terra); }
+
+/* 7. Galeria e Público Alvo */
+.project-gallery h3 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+}
+
+.gallery-img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.gallery-img:hover { transform: scale(1.02); }
+
+/* Público Alvo com mais destaque */
+.target-box {
+    background: var(--verde-musgo);
+    color: white;
+    padding: 30px;
+    border-radius: 25px;
+    margin-bottom: 30px; /* Movi para cima das fotos no layout se quiser */
+    position: relative;
+}
+
+.target-box h4 {
+    color: var(--ocre-suave);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.target-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* 8. Checklist */
+.check-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.check-list li {
+    padding: 12px 0;
+    border-bottom: 1px dashed #ccc;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.check-list li::before {
+    content: "→";
+    color: var(--vermelho-terra);
+    margin-right: 15px;
+}
+
+/* 9. Responsividade */
+@media (max-width: 900px) {
+    .project-grid-layout {
+        grid-template-columns: 1fr;
+    }
+    .project-hero h1 { font-size: 2.5rem; }
+}

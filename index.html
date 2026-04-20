@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letícia Soares | Portfólio de Publicidade</title>
+    
+    <!-- SEO e Redes Sociais -->
+    <meta name="description" content="Portfólio criativo de Letícia Soares. Estudante de Publicidade e Propaganda na FAM, especializada em Canva e CapCut.">
+    
+    <!-- Scripts e Fontes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/projects.css">
+
+<script scr="script/script.js"></script>
+<script scr="script/script-projects.js"></script>
+sc
+</head>
+<body>
+
+    <!-- Sidebar Navegação Fixa -->
+    <aside class="sidebar">
+        <div class="text-center mb-10">
+            <div class="w-24 h-24 bg-white rounded-full mx-auto mb-4 p-1 shadow-inner overflow-hidden border-2 border-white/20">
+                <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Leticia&backgroundColor=b6e3f4" alt="Letícia Soares" class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-2xl font-bold">Letícia Soares</h1>
+            <p class="text-[10px] uppercase tracking-widest opacity-60 font-bold">Publicitária & Criativa</p>
+        </div>
+
+        <nav class="flex-grow space-y-3 font-handwritten">
+            <a href="#inicio" class="nav-link">✦ Início</a>
+            <a href="#projetos" class="nav-link">✦ Projetos FAM</a>
+            <a href="#experiencia" class="nav-link">✦ Experiência</a>
+            <a href="#habilidades" class="nav-link">✦ Habilidades</a>
+            <a href="#contato" class="nav-link">✦ Contato</a>
+        </nav>
+
+        <div class="pt-6 border-t border-white/10">
+            <a href="#" class="flex items-center justify-center gap-2 w-full bg-white text-verde-musgo py-3 rounded-xl font-bold text-sm hover:bg-vermelho-terra hover:text-white transition-all shadow-lg">
+                <i class="fa-solid fa-download"></i> Baixar Currículo
+            </a>
+        </div>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        
+        <!-- Bio / Hero -->
+        <section id="inicio" class="mb-32 flex flex-col lg:flex-row items-center gap-12">
+            <div class="flex-1">
+                <span class="text-vermelho-terra font-bold text-xs uppercase tracking-widest bg-vermelho-terra/10 px-4 py-2 rounded-full">Bem-vindo(a) ao meu mundo</span>
+                <h2 class="text-5xl md:text-6xl font-bold mt-6 mb-8 leading-tight">
+                    "<span class="text-vermelho-terra">A arte existe</span> porque a vida não basta."
+                </h2>
+                <p class="text-xl text-gray-700 leading-relaxed max-w-2xl">
+                    Sou a <strong>Letícia</strong>, estudante de Publicidade na FAM. Transformo ideias em experiências visuais usando <strong>Canva</strong> e <strong>CapCut</strong>. Meu foco é unir estética à responsabilidade social.
+                </p>
+            </div>
+            <div class="w-64 h-64 float-anim opacity-80 hidden md:block">
+                <img src="https://api.dicebear.com/7.x/bottts-neutral/svg?seed=LeticiaArt" alt="Avatar" class="w-full h-full">
+            </div>
+        </section>
+
+        <!-- Seção Projetos FAM -->
+        <section id="projetos" class="mb-32">
+            <h3 class="text-4xl font-bold mb-12 flex items-center gap-4">
+                Projetos Universitários <span class="h-px flex-1 bg-ocre-suave/30"></span>
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Case Coca-Cola -->
+
+
+
+                <section id="projetos" class="section-container">
+    <h3 class="section-title">Projetos Acadêmicos <span class="line"></span></h3>
+    
+    <div class="projects-grid">
+        <div class="card-projeto" onclick="location.href='projects.html?id=coca-cola'">
+            <div class="project-img-container">
+                <img src="img/IMGCoke.jpeg" alt="Projeto Coca-Cola">
+                
+                <div class="project-overlay">
+                    <h4>Case Coca-Cola</h4>
+                    <p>Diagnóstico de marca e estratégias de comunicação sustentável.</p>
+                    
+                    <div class="flex flex-wrap justify-center">
+                        <span class="skill-tag-mini">Diagnóstico de Marca</span>
+                        <span class="skill-tag-mini">Design de Banner</span>
+                        <span class="skill-tag-mini">Problem Solving</span>
+                    </div>
+                    
+                    <span class="btn-ver-mais">Ver Detalhes do Projeto</span>
+                </div>
+            </div>
+        </div>
+
+        </div>
+</section>
+
+<div id="modal-projeto" class="modal-overlay">
+    <div class="modal-content">
+        <button class="close-modal" onclick="fecharProjeto()">&times;</button>
+        <div id="conteudo-dinamico-projeto">
+            </div>
+    </div>
+</div>
+
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div id="modal-body-content">
+            </div>
+    </div>
+</div>
+
+
+                <!-- Comportamento Juvenil -->
+                <div class="card-projeto p-10">
+                    <div class="text-4xl mb-6">📊</div>
+                    <h4 class="text-2xl font-bold mb-3">Pesquisa de Comportamento</h4>
+                    <p class="text-gray-600 text-sm">Estudo de hábitos e identidade de jovens entre 18 e 25 anos, com foco em dados e apresentação visual.</p>
+                </div>
+
+                <!-- Fotografia -->
+                <div class="card-projeto p-10">
+                    <div class="text-4xl mb-6">📸</div>
+                    <h4 class="text-2xl font-bold mb-3">Narrativa Fotográfica</h4>
+                    <p class="text-gray-600 text-sm">Prática de fotografia mobile e edição narrativa, explorando a luz como ferramenta de persuasão visual.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Experiência -->
+        <section id="experiencia" class="mb-32">
+            <h3 class="text-4xl font-bold mb-12 flex items-center gap-4 text-vermelho-terra">
+                Experiência & Formação <span class="h-px flex-1 bg-vermelho-terra/10"></span>
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl border-l-8 border-green-600 shadow-sm">
+                    <h4 class="font-bold text-lg">Módulo VIVA</h4>
+                    <p class="text-sm text-gray-500 mt-2">Projeto de máquina modular para economia de recursos naturais.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border-l-8 border-yellow-500 shadow-sm">
+                    <h4 class="font-bold text-lg">Marchinha Social</h4>
+                    <p class="text-sm text-gray-500 mt-2">Campanha criativa contra o trabalho infantil no Carnaval.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border-l-8 border-blue-500 shadow-sm">
+                    <h4 class="font-bold text-lg">Crachá Digital</h4>
+                    <p class="text-sm text-gray-500 mt-2">Design focado em Branding Pessoal e Soft Skills.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="habilidades" class="mb-32">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-white p-10 rounded-[40px] border-2 border-verde-musgo">
+                    <h4 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                        <i class="fa-solid fa-palette text-vermelho-terra"></i> Ferramentas
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-verde-musgo/5 px-4 py-2 rounded-full text-sm font-bold">Canva Pro</span>
+                        <span class="bg-verde-musgo/5 px-4 py-2 rounded-full text-sm font-bold">CapCut</span>
+                        <span class="bg-verde-musgo/5 px-4 py-2 rounded-full text-sm font-bold">Edição Mobile</span>
+                        <span class="bg-verde-musgo/5 px-4 py-2 rounded-full text-sm font-bold">Design de Apresentação</span>
+                    </div>
+                </div>
+                <div class="bg-white p-10 rounded-[40px] border-2 border-verde-musgo">
+                    <h4 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                        <i class="fa-solid fa-bolt text-vermelho-terra"></i> Diferenciais
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-verde-musgo/5 px-4 py-2 rounded-full text-sm font-bold">Proatividade</span>
+                        <span class="bg-verde-musgo/5 px-4 py-2 rounded-full text-sm font-bold">Visão Social</span>
+                        <span class="bg-verde-musgo/5 px-4 py-2 rounded-full text-sm font-bold">Resiliência</span>
+                        <span class="bg-verde-musgo/5 px-4 py-2 rounded-full text-sm font-bold">Criatividade</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contato" class="bg-verde-musgo text-white rounded-[50px] p-16 text-center relative overflow-hidden">
+            <div class="relative z-10">
+                <h3 class="text-5xl font-bold mb-8">Vamos criar juntos?</h3>
+                <p class="font-handwritten text-3xl mb-12 opacity-80">Transformando ideias em impacto visual.</p>
+                
+                <div class="flex flex-wrap justify-center gap-6 mb-16">
+                    <a href="mailto:caynnepessoal@gmail.com" class="bg-white text-verde-musgo px-10 py-4 rounded-2xl font-bold hover:bg-vermelho-terra hover:text-white transition-all shadow-lg flex items-center gap-3">
+                        <i class="fa-solid fa-envelope"></i> E-mail
+                    </a>
+                    <a href="https://wa.me/5511917615190" target="_blank" class="bg-white text-verde-musgo px-10 py-4 rounded-2xl font-bold hover:bg-vermelho-terra hover:text-white transition-all shadow-lg flex items-center gap-3">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+
+                <div class="flex justify-center gap-8 opacity-40 text-[10px] font-bold tracking-widest uppercase">
+                    <a href="#" class="hover:text-white">Linkedin</a>
+                    <a href="#" class="hover:text-white">Instagram</a>
+                    <a href="#" class="hover:text-white">Behance</a>
+                </div>
+                <p class="mt-16 text-[10px] opacity-30 italic">© 2026 Letícia Soares • Design com Propósito</p>
+            </div>
+            
+            <!-- Elementos Decorativos -->
+            <div class="absolute -bottom-10 -left-10 text-[12rem] opacity-5 pointer-events-none float-anim">🍄</div>
+            <div class="absolute -top-10 -right-10 text-[8rem] opacity-5 pointer-events-none float-anim" style="animation-delay: 2s;">✨</div>
+        </footer>
+    </main>
+    <div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div id="modalBody">
+            </div>
+    </div>
+</div>
+
+</body>
+
+</html>
