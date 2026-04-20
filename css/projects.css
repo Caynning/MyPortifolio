@@ -20,6 +20,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 25px;
+    box-sizing: border-box; /* Importante para o padding não somar na largura */
 }
 
 /* 2. Navegação Superior */
@@ -85,12 +86,16 @@
 }
 
 /* 4. Layout Principal (Grid) */
+.creative-side, .strategy-side {
+    min-width: 0; 
+}
 .main-project-grid {
     display: grid;
-    grid-template-columns: 1fr 1.3fr;
-    gap: 80px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); /* O minmax(0, ...) impede que a coluna expanda além do pai */
+    gap: 40px;
     margin-top: 60px;
     align-items: start;
+    width: 100%; /* Garante que ocupe apenas 100% do container */
 }
 
 /* Lado Esquerdo: Peça Criativa */
@@ -109,7 +114,9 @@
 }
 
 .main-banner-img {
-    width: 100%;
+    max-width: 100%; /* Nunca maior que a coluna */
+    height: auto;
+    display: block;
     border-radius: 20px;
     box-shadow: 0 30px 60px rgba(0,0,0,0.12);
 }
@@ -144,7 +151,8 @@
 /* --- AJUSTE DA MATRIZ SWOT --- */
 .swot-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* Usar minmax evita que o card fique minúsculo antes do breakpoint */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
     gap: 15px;
 }
 
@@ -156,6 +164,8 @@
     font-size: 0.95rem;
     box-shadow: 0 5px 15px rgba(0,0,0,0.03);
     line-height: 1.6;
+    /* Garante que o texto longo quebre a linha em vez de empurrar o card */
+    word-wrap: break-word; 
 }
 
 .swot-card strong {
@@ -191,7 +201,7 @@
 /* 6. Galeria de Imagens Adicionais */
 .process-gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
 }
 
@@ -226,5 +236,25 @@
 
     .project-hero h1 {
         font-size: 2.2rem;
+    }
+}
+@media (max-width: 1100px) {
+    .main-project-grid {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .main-project-grid {
+        grid-template-columns: 1fr; /* Vira uma coluna só */
+    }
+
+    .sticky-content {
+        position: relative; /* Para de flutuar para não cobrir o resto */
+        top: 0;
+    }
+
+    .project-page main {
+        padding: 0 15px !important; /* Espaçamento nas bordas do celular */
     }
 }

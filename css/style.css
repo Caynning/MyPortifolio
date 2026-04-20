@@ -1,501 +1,135 @@
-/* 1. Variáveis e Reset */
-:root {
-    --verde-musgo: #4A5D4E;
-    --vermelho-terra: #A64444;
-    --bege-papel: #F4F1EA;
-    --ocre-suave: #D9B48F;
-    --branco: #FFFFFF;
-    --preto-opaco: rgba(0, 0, 0, 0.05);
-    --shadow-soft: 0 10px 30px rgba(74, 93, 78, 0.08);
-}
+/* STYLE.CSS 
+   Organização de Seções, Cards de Projetos e Modais.
+   Dependências: base.css e home.css
+*/
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-}
-
-body {
-    background-color: var(--bege-papel);
-    color: var(--verde-musgo);
-    font-family: 'Nunito', sans-serif;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-h1, h2, h3, h4, .font-handwritten {
-    font-family: 'Gaegu', cursive;
-}
-
-/* 2. Sidebar Fixa */
-.sidebar {
-    height: 100vh;
-    width: 280px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: var(--verde-musgo);
-    color: var(--branco);
-    padding: 3rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    z-index: 1000;
-    box-shadow: 4px 0 20px rgba(0,0,0,0.1);
-}
-
-.sidebar-header {
-    text-align: center;
-    margin-bottom: 2.5rem;
-}
-
-.profile-container {
-    width: 100px;
-    height: 100px;
-    background: var(--branco);
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-    padding: 5px;
-    overflow: hidden;
-    border: 2px solid rgba(255,255,255,0.2);
-}
-
-.profile-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.sidebar h1 {
-    font-size: 1.8rem;
-    margin-bottom: 0.2rem;
-}
-
-.subtitle {
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    opacity: 0.7;
-    font-weight: 700;
-}
-
-/* Navegação */
-.nav-menu {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-.nav-link {
-    color: rgba(255,255,255,0.7);
-    text-decoration: none;
-    font-size: 1.3rem;
-    padding: 0.6rem 1rem;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-    background: rgba(255,255,255,0.1);
-    color: var(--branco);
-    transform: translateX(8px);
-}
-
-.btn-download {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: var(--branco);
-    color: var(--verde-musgo);
-    text-decoration: none;
-    padding: 1rem;
-    border-radius: 15px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.btn-download:hover {
-    background: var(--vermelho-terra);
-    color: var(--branco);
-    transform: scale(1.05);
-}
-
-/* 3. Conteúdo Principal */
-main {
-    margin-left: 280px;
-    padding: 4rem;
-    max-width: 1200px;
-}
-
-/* Seção Hero */
-.hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 70vh;
-    margin-bottom: 6rem;
-    gap: 3rem;
-}
-
-.badge {
-    background: rgba(166, 68, 68, 0.1);
-    color: var(--vermelho-terra);
-    padding: 0.5rem 1.2rem;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.hero-title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    margin: 1.5rem 0;
-    line-height: 1.1;
-}
-
-.highlight {
-    color: var(--vermelho-terra);
-}
-
-.hero-text {
-    font-size: 1.2rem;
-    color: #555;
-    max-width: 600px;
-}
-
-.hero-image img {
-    width: 250px;
-    height: auto;
-    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
-}
-
-/* 4. Grades e Cards */
+/* 1. Layout de Seções */
 .section-container {
     margin-bottom: 8rem;
+    width: 100%;
 }
 
-.section-title {
-    font-size: 2.5rem;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 3rem;
-}
-
-.line {
-    height: 1px;
-    flex-grow: 1;
-    background: var(--ocre-suave);
-    opacity: 0.4;
-}
-
+/* 2. Grid de Projetos */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2.5rem;
 }
 
-/* Estrutura do Card */
+/* 3. Estrutura do Card de Projeto */
 .card-projeto {
     position: relative;
     border-radius: 24px;
     overflow: hidden;
     background: var(--branco);
-    height: 450px; 
+    height: 420px; 
     cursor: pointer;
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
+
 .card-projeto:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(74, 93, 78, 0.15);
 }
-.card-projeto.full-width {
-    grid-column: span 2;
-    display: flex;
-    padding: 0;
-    overflow: hidden;
-}
 
-.card-image {
-    width: 50%;
+/* Controle da Imagem dentro do Card */
+.project-img-container {
+    width: 100%;
+    height: 100%;
     position: relative;
-    background: #111;
 }
 
-.card-image img {
+.project-img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.6;
+    transition: transform 0.6s ease;
 }
 
-.image-overlay {
+.card-projeto:hover img {
+    transform: scale(1.1);
+}
+
+/* 4. Overlay Verde (Hover que sobe) */
+.project-overlay {
     position: absolute;
     inset: 0;
+    background: linear-gradient(to top, 
+                rgba(74, 93, 78, 0.98) 0%, 
+                rgba(74, 93, 78, 0.85) 60%, 
+                rgba(74, 93, 78, 0) 100%);
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--branco);
-    font-size: 3rem;
-    text-align: center;
-}
-
-.card-body {
-    padding: 3rem;
-    width: 50%;
-}
-
-.card-projeto:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-soft);
-}
-
-.card-icon {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-}
-
-/* Tags */
-.tags-container {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.tag {
-    padding: 4px 12px;
-    border-radius: 50px;
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.tag-red { background: #fee2e2; color: #ef4444; }
-.tag-gray { background: #f4f4f5; color: #71717a; }
-
-/* 5. Experiência e Skills */
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.exp-card {
-    background: var(--branco);
-    padding: 2rem;
-    border-radius: 20px;
-    border-left: 6px solid;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-}
-
-.border-green { border-color: #10b981; }
-.border-yellow { border-color: #f59e0b; }
-.border-blue { border-color: #3b82f6; }
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-
-.skills-box {
-    background: var(--branco);
-    padding: 2.5rem;
-    border-radius: 35px;
-    border: 2px solid var(--verde-musgo);
-}
-
-.skills-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    margin-top: 1.5rem;
-}
-
-.skills-tags span {
-    background: rgba(74, 93, 78, 0.05);
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 700;
-}
-
-/* 6. Footer */
-.main-footer {
-    background: var(--verde-musgo);
-    color: var(--branco);
-    border-radius: 50px;
-    padding: 5rem 2rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.footer-content {
-    position: relative;
-    z-index: 5;
-}
-
-.main-footer h3 { font-size: 3.5rem; margin-bottom: 1rem; }
-.footer-tagline { font-family: 'Gaegu'; font-size: 2rem; opacity: 0.8; margin-bottom: 3rem; }
-
-.contact-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 4rem;
-}
-
-.btn-contact {
-    background: var(--branco);
-    color: var(--verde-musgo);
-    padding: 1.2rem 2.5rem;
-    border-radius: 18px;
-    text-decoration: none;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: 0.3s;
-}
-
-.btn-contact:hover {
-    background: var(--vermelho-terra);
-    color: var(--branco);
-    transform: translateY(-5px);
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 3rem;
-}
-
-.social-links a {
-    color: var(--branco);
-    opacity: 0.5;
-    text-decoration: none;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.social-links a:hover { opacity: 1; }
-
-/* Elementos Decorativos */
-.deco {
-    position: absolute;
-    opacity: 0.07;
-    pointer-events: none;
-}
-
-.deco-bottom { font-size: 12rem; bottom: -20px; left: -20px; }
-.deco-top { font-size: 10rem; top: -20px; right: -20px; }
-
-/* 7. Animações e Responsividade */
-.float-anim {
-    animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-}
-
-@media (max-width: 1024px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-    main {
-        margin-left: 0;
-        padding: 2rem;
-    }
-    .hero-section {
-        flex-direction: column;
-        text-align: center;
-    }
-    .projects-grid, .experience-grid, .skills-grid {
-        grid-template-columns: 1fr;
-    }
-    .card-projeto.full-width {
-        flex-direction: column;
-    }
-    .card-image, .card-body {
-        width: 100%;
-    }
-}
-/* Efeito Hover Verde no Card */
-.card-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.image-overlay-hover {
-    position: absolute;
-    inset: 0;
-    background: rgba(74, 93, 78, 0.9); /* Verde Musgo com transparência */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
     opacity: 0;
-    transition: all 0.4s ease;
-    z-index: 10;
+    transform: translateY(100%);
+    transition: all 0.4s ease-in-out;
 }
 
-.card-projeto:hover .image-overlay-hover {
+.card-projeto:hover .project-overlay {
     opacity: 1;
-}
-
-.hover-content {
-    text-align: center;
-    color: white;
-    transform: translateY(20px);
-    transition: all 0.4s ease;
-}
-
-.card-projeto:hover .hover-content {
     transform: translateY(0);
 }
 
-.hover-content p {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+.overlay-content h4 {
+    color: var(--ocre-suave);
+    font-size: 1.8rem;
+    margin: 5px 0 10px;
 }
 
-.btn-view {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 8px 20px;
-    background: white;
-    color: var(--verde-musgo);
-    border-radius: 50px;
+.category-tag {
+    color: var(--branco);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     font-weight: 700;
-    font-size: 0.8rem;
 }
 
-.image-title-static {
-    position: absolute;
-    inset: 0;
+.overlay-content p {
+    color: rgba(255,255,255,0.9);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* 5. Tags de Habilidades no Card */
+.skills-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 3rem;
-    z-index: 5;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
 }
 
-/* Estilos do Modal */
+.skill-tag-mini {
+    background: rgba(255,255,255,0.15);
+    color: var(--branco);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    backdrop-filter: blur(5px);
+}
+
+.btn-ver-mais {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--branco);
+    font-weight: 700;
+    font-size: 0.85rem;
+    border-bottom: 2px solid var(--ocre-suave);
+    padding-bottom: 4px;
+    transition: 0.3s;
+}
+
+.btn-ver-mais:hover {
+    gap: 15px;
+    color: var(--ocre-suave);
+}
+
+/* 6. Estilos do Modal (Caso use modal em vez de página externa) */
 .modal {
     display: none;
     position: fixed;
@@ -526,133 +160,26 @@ main {
     color: var(--verde-musgo);
 }
 
-.modal-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-top: 2rem;
+/* 7. Utilitários de Design Adicionais */
+.insight-box {
+    background: var(--branco);
+    border-left: 5px solid var(--vermelho-terra);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 15px 15px 0;
+    font-style: italic;
 }
 
-.modal-images img {
-    width: 100%;
-    border-radius: 15px;
-    margin-bottom: 1rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+/* Ajustes para telas pequenas */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .card-projeto {
+        height: 350px;
+    }
+    .overlay-content h4 {
+        font-size: 1.4rem;
+    }
 }
 
-.modal-text h2 { font-size: 2.5rem; margin-bottom: 1rem; }
-.modal-text h5 { font-weight: 800; text-transform: uppercase; margin-top: 1.5rem; font-size: 0.8rem; color: var(--vermelho-terra); }
-
-/* Ajustes no Container do Card */
-.card-projeto {
-    position: relative;
-    border-radius: 24px;
-    overflow: hidden;
-    background: #fff;
-    height: 400px; /* Altura fixa para manter o grid bonito */
-    cursor: pointer;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.card-projeto:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(74, 93, 78, 0.15);
-}
-
-/* Controle da Imagem */
-.project-img-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.project-img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que a foto preencha sem esticar */
-    transition: transform 0.6s ease;
-}
-
-.card-projeto:hover img {
-    transform: scale(1.1); /* Zoom suave na imagem ao fundo */
-}
-
-/* O Overlay Verde que sobe */
-.project-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, 
-                rgba(74, 93, 78, 0.98) 0%, 
-                rgba(74, 93, 78, 0.8) 60%, 
-                rgba(74, 93, 78, 0) 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* Conteúdo começa embaixo */
-    padding: 30px;
-    opacity: 0;
-    transform: translateY(100%); /* Começa fora da visão embaixo */
-    transition: all 0.4s ease-in-out;
-}
-
-.card-projeto:hover .project-overlay {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Textos dentro do Overlay */
-.overlay-content h4 {
-    color: #D9B48F; /* Ocre suave */
-    font-size: 1.8rem;
-    margin: 5px 0 10px;
-}
-
-.category-tag {
-    color: #fff;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 700;
-}
-
-.overlay-content p {
-    color: rgba(255,255,255,0.9);
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-    line-height: 1.4;
-}
-
-/* Tags de Habilidades no Card */
-.skills-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 20px;
-}
-
-.skill-tag-mini {
-    background: rgba(255,255,255,0.15);
-    color: #fff;
-    padding: 4px 12px;
-    border-radius: 50px;
-    font-size: 0.65rem;
-    font-weight: 600;
-    backdrop-filter: blur(5px);
-}
-
-.btn-ver-mais {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: #fff;
-    font-weight: 700;
-    font-size: 0.85rem;
-    border-bottom: 2px solid #D9B48F;
-    padding-bottom: 4px;
-    transition: 0.3s;
-}
-
-.btn-ver-mais:hover {
-    gap: 15px; /* Seta se mexe */
-    color: #D9B48F;
-}

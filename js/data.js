@@ -3,12 +3,13 @@ const projetos = {
 
     
 'coca-cola': {
-    titulo: "Do Diagnóstico à Comunicação: Coca-Cola",
+titulo: "Do Diagnóstico à Comunicação: Coca-Cola",
     categoria: "Projeto de Extensão Acadêmica",
     cliente: "Faculdade das Américas (FAM)",
+    // NOVO CAMPO:
+    papel: "Responsável pelo Design Visual e Peças Criativas", 
     objetivo: "Desenvolvimento de estratégias de branding sustentável e análise de comunicação integrada.",
-    descricao: `Este projeto acadêmico aprofundou-se no desafio da <strong>Coca-Cola</strong> em equilibrar sua liderança de mercado com as exigências ESG (Ambiental, Social e Governança). O trabalho foi estruturado sob as normas ABNT, garantindo rigor científico ao diagnóstico de marca.`,
-    
+    descricao: `Este projeto acadêmico aprofundou-se no desafio da <strong>Coca-Cola</strong> em equilibrar sua liderança de mercado com as exigências ESG. Enquanto o grupo focou no diagnóstico estrutural, minha atuação principal foi transformar os dados em uma narrativa visual através do banner publicitário.`,
     // Análise Estratégica Extraída do PDF
     analise: {
         swot: [
