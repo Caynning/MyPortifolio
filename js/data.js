@@ -64,52 +64,62 @@ const projetos = {
         corDestaque: "#222222" // Um cinza quase preto para combinar com o tema P&B
     },
 
-    
+    // ... dentro de const projetos = {
 
-'lixo': {
+    'lixo': {
         titulo: "Módulo VIVA: Sustentabilidade no Dia a Dia",
         categoria: "Jovem Aprendiz | Meio Ambiente",
         cliente: "EchoCharge Brasil",
-        papel: "Pesquisadora e Designer de Soluções Sustentáveis",
-        objetivo: "Desenvolver um sistema modular para redução de resíduos e economia de recursos.",
-        estrategiaVisual: "A apresentação utiliza uma estética limpa, com tons de verde e elementos que remetem à natureza e tecnologia. O foco foi tornar dados complexos de engenharia sustentável em algo visualmente acessível e educativo.",
-        descricao: "Projeto focado na criação do 'Módulo VIVA', um sistema para captação de água da chuva e energia solar. Trabalhei no levantamento de benefícios ambientais e na estruturação do guia de economia de água e energia.",
+        papel: "Pesquisadora e Designer de Soluções",
+        objetivo: "Desenvolver um sistema modular para redução de resíduos.",
+        estrategiaVisual: "A apresentação foi construída para ser didática e visualmente leve. Usei ícones minimalistas e uma hierarquia de informações que guia o espectador através do problema, da solução técnica e dos benefícios finais.",
+        descricao: "Este deck de slides apresenta o 'Módulo VIVA', um projeto inovador de captação de água e energia solar. O foco foi transformar conceitos técnicos de engenharia sustentável em uma linguagem visual clara para o público final.",
         analise: {
-            publico: "Comunidade local e empresas focadas em ESG.",
-            insights: "Soluções simples de baixo custo geram maior engajamento social em sustentabilidade."
+            publico: "Empresas com foco em ESG e comunidades locais.",
+            insights: "A visualização de dados ajudou a provar que soluções sustentáveis podem ser de baixo custo."
         },
         entregáveis: [
-            "Estudo de viabilidade de módulos sustentáveis",
-            "Criação de manual educativo de consumo consciente",
-            "Design de apresentação do projeto (Canva)",
-            "Análise de logística de materiais reciclados"
+            "Apresentação estruturada de projeto (Deck de Slides)",
+            "Manual educativo de consumo consciente",
+            "Identidade visual do Módulo VIVA"
         ],
-        bannerPrincipal: "img/lixo_capa.jpg",
-        imagens: ["img/lixo_detalhe1.jpg", "img/lixo_detalhe2.jpg"],
-        corDestaque: "#10b981"
+        bannerPrincipal: "img/lixo_slide1.jpg", // O primeiro slide
+        // Aqui você coloca os slides em ordem:
+        imagens: [
+            "img/lixo_slide1.jpg", 
+            "img/lixo_slide2.jpg", 
+            "img/lixo_slide3.jpg",
+            "img/lixo_slide4.jpg"
+        ],
+        corDestaque: "#10b981",
+        tipoProjeto: "apresentacao" // Adicionamos uma tag para identificar o estilo
     },
 
     'carnaval': {
         titulo: "Marchinha Social: Contra o Trabalho Infantil",
         categoria: "Jovem Aprendiz | Impacto Social",
         cliente: "Projeto de Conscientização Social",
-        papel: "Criativa e Comunicadora Social",
-        objetivo: "Gerar empatia e informar sobre os riscos do trabalho infantil durante grandes festividades.",
-        estrategiaVisual: "Utilizei um contraste entre as cores vibrantes do carnaval e o peso informativo dos artigos do ECA. O design busca capturar a atenção para um tema sensível através de uma narrativa visual clara e urgente.",
-        descricao: "Desenvolvimento de campanha focada na proteção de crianças e adolescentes. O projeto analisou o impacto físico e psicológico do trabalho precoce nas ruas e utilizou a legislação (ECA e ONU) como base para propostas de proteção.",
+        papel: "Criativa e Comunicadora",
+        objetivo: "Sensibilizar sobre os riscos do trabalho infantil no carnaval.",
+        estrategiaVisual: "Para este material, utilizei um design de alto impacto emocional. O contraste entre cores festivas e dados sérios do ECA cria uma tensão visual necessária para o tema, garantindo que a mensagem não seja ignorada.",
+        descricao: "Uma apresentação de conscientização que une legislação (ECA/ONU) com análise social. Os slides foram pensados para serem lidos de forma rápida, com frases de impacto e imagens que reforçam o direito ao brincar.",
         analise: {
-            publico: "Foliões, órgãos públicos e sociedade civil.",
-            insights: "A normalização do trabalho infantil no carnaval precisa ser combatida com informação legal e apelo emocional."
+            publico: "Sociedade civil e foliões.",
+            insights: "O design ajudou a humanizar os dados frios da lei."
         },
         entregáveis: [
-            "Análise de riscos sociais (Violência e Exploração)",
-            "Infográfico sobre Direitos da Criança e Adolescente (ECA)",
-            "Proposta de intervenção social para eventos públicos",
-            "Apresentação de conscientização comunitária"
+            "Campanha de conscientização em slides",
+            "Infográfico de riscos e direitos",
+            "Relatório de impacto social"
         ],
-        bannerPrincipal: "img/carnaval_capa.jpg",
-        imagens: ["img/carnaval_detalhe1.jpg", "img/carnaval_detalhe2.jpg"],
-        corDestaque: "#f59e0b"
+        bannerPrincipal: "img/carnaval_slide1.jpg",
+        imagens: [
+            "img/carnaval_slide1.jpg",
+            "img/carnaval_slide2.jpg",
+            "img/carnaval_slide3.jpg"
+        ],
+        corDestaque: "#f59e0b",
+        tipoProjeto: "apresentacao"
     },
 
     'risos': {
@@ -117,21 +127,24 @@ const projetos = {
         categoria: "Jovem Aprendiz | Desenvolvimento",
         cliente: "Módulo de Desenvolvimento Humano",
         papel: "Autoconhecimento e Branding Pessoal",
-        objetivo: "Mapear pontos fortes e competências comportamentais para o mercado de trabalho.",
-        estrategiaVisual: "Uma abordagem mais artística e livre, utilizando colagens de palavras (Word Cloud) para expressar traços de personalidade como resiliência, criatividade e otimismo.",
-        descricao: "Este projeto foi um mergulho no branding pessoal. Analisei minhas principais características (Curiosa, Prestativa, Resiliente) e como essas 'soft skills' contribuem para o ambiente profissional e criativo.",
+        objetivo: "Mapear competências comportamentais para o mercado.",
+        estrategiaVisual: "O layout utiliza colagens e tipografias variadas para refletir a multiplicidade da personalidade. É uma peça de branding pessoal que foge do corporativo tradicional para mostrar autenticidade.",
+        descricao: "Este conjunto de slides é um exercício de branding pessoal. Através de uma narrativa visual lúdica, apresento minhas 'soft skills' e minha visão de mundo, unindo criatividade e resiliência.",
         analise: {
-            publico: "Recrutadores e parceiros de equipe.",
-            insights: "O autoconhecimento é a base para uma comunicação assertiva e proativa no ambiente de trabalho."
+            publico: "Recrutadores e parceiros criativos.",
+            insights: "Mostrar quem você é de verdade cria conexões mais fortes que um currículo comum."
         },
         entregáveis: [
-            "Mapeamento de competências (Soft Skills)",
-            "Painel semântico de identidade pessoal",
-            "Desenvolvimento de inteligência emocional",
-            "Análise de perfil para atuação em equipes"
+            "Painel Semântico de Identidade",
+            "Mapeamento de Soft Skills",
+            "Deck de Branding Pessoal"
         ],
-        bannerPrincipal: "img/risos_capa.jpg",
-        imagens: ["img/risos_detalhe1.jpg"],
-        corDestaque: "#3b82f6"
+        bannerPrincipal: "img/risos_slide1.jpg",
+        imagens: [
+            "img/risos_slide1.jpg",
+            "img/risos_slide2.jpg"
+        ],
+        corDestaque: "#3b82f6",
+        tipoProjeto: "apresentacao"
     }
 };
