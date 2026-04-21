@@ -94,51 +94,61 @@ const projetos = {
             "Design e diagramação de manual educativo",
             "Criação de apresentação visual (Canva) e iconografia"
         ],
-        slides: ["img/viva/viva(1).jpeg", "img/viva/viva(2).jpeg", "img/viva/viva(3).jpeg", "img/viva/viva(4).jpeg", "img/viva/viva(5).jpeg", "img/viva/viva(6).jpeg", "img/viva/viva(7).jpeg", "img/viva/viva(8).jpeg", "img/viva/viva(9).jpeg", "img/viva/viva(10).jpeg", "img/viva/viva(11).jpeg", "img/viva/viva(12).jpeg"],
+        slides: ["img/viva/viva(1).jpeg", "img/viva/viva(2).jpeg", "img/viva/viva(3).jpeg", "img/viva/viva(4).jpeg", "img/viva/viva(5).jpeg", "img/viva/viva(6).jpeg", "img/viva/viva(7).jpeg", "img/viva/viva(8).jpeg", "img/viva/viva(9).jpeg"],
         corDestaque: "#10b981"
     },
 
     'carnaval': {
-        tipo: "apresentacao",
-        titulo: "Marchinha Social: Contra o Trabalho Infantil",
-        categoria: "Jovem Aprendiz | Impacto Social",
-        cliente: "Projeto de Conscientização Social",
-        papel: "Diretora de Arte e Criativa",
-        objetivo: "Gerar empatia e informar sobre os riscos do trabalho infantil.",
-        estrategiaVisual: "Criei o conceito visual explorando o contraste direto: usei cores vibrantes típicas do carnaval em oposição a imagens e textos sóbrios baseados no ECA. O design foi pensado para chamar a atenção pela estética festiva e converter essa atenção em conscientização social séria.",
-        descricao: "Campanha focada na proteção de crianças e adolescentes. Minha função foi desenvolver toda a parte visual, transformando artigos de lei em infográficos compreensíveis e slides impactantes.",
-        analise: {
-            publico: "Foliões e órgãos públicos.",
-            insights: "A normalização do trabalho infantil precisa ser combatida com informação visual clara."
+            tipo: "apresentacao",
+            titulo: "Marchinha Social: Contra o Trabalho Infantil",
+            categoria: "Jovem Aprendiz | Impacto Social",
+            cliente: "Projeto de Conscientização Social",
+            papel: "Diretora de Arte e Criativa",
+            objetivo: "Gerar empatia e informar sobre os riscos do trabalho infantil.",
+            estrategiaVisual: "Criei o conceito visual explorando o contraste direto: usei cores vibrantes típicas do carnaval em oposição a imagens e textos sóbrios baseados no ECA. O design foi pensado para chamar a atenção pela estética festiva e converter essa atenção em conscientização social séria.",
+            descricao: "Campanha focada na proteção de crianças e adolescentes. Minha função foi desenvolver toda a parte visual, transformando artigos de lei em infográficos compreensíveis e slides impactantes.",
+            analise: {
+                publico: "Foliões e órgãos públicos.",
+                insights: "A normalização do trabalho infantil precisa ser combatida com informação visual clara."
+            },
+            entregáveis: [
+                "Criação de conceito visual e paleta cromática",
+                "Design de Infográficos baseados no ECA",
+                "Desenvolvimento de apresentação de conscientização"
+            ],
+            slides: [
+                "img/carnaval/carnaval1.jpeg",
+                "img/carnaval/carnaval2.jpeg",
+                "img/carnaval/carnaval3.jpeg",
+                "img/carnaval/carnaval4.jpeg",
+                "img/carnaval/carnaval5.jpeg",
+                "img/carnaval/carnaval6.jpeg",
+                "img/carnaval/carnaval7.jpeg"
+            ],
+            corDestaque: "#f59e0b"
         },
-        entregáveis: [
-            "Criação de conceito visual e paleta cromática",
-            "Design de Infográficos baseados no ECA",
-            "Desenvolvimento de apresentação de conscientização"
-        ],
-        slides: ["img/carnaval_1.jpg", "img/carnaval_2.jpg", "img/carnaval_3.jpg", "img/carnaval_4.jpg"],
-        corDestaque: "#f59e0b"
-    },
 
-    'risos': {
-        tipo: "apresentacao",
-        titulo: "Identidade Pessoal e Soft Skills",
-        categoria: "Jovem Aprendiz | Desenvolvimento",
-        cliente: "Módulo de Desenvolvimento Humano",
-        papel: "Designer Visual de Branding Pessoal",
-        objetivo: "Mapear pontos fortes para o mercado de trabalho.",
-        estrategiaVisual: "Desenvolvi uma abordagem artística baseada em colagens e 'Word Clouds' (nuvens de palavras). O design reflete a pluralidade da identidade através de composições tipográficas e um estilo visual que equilibra criatividade com o profissionalismo do mercado.",
-        descricao: "Mergulho no branding pessoal. Atuei na criação do painel semântico e na tradução visual de competências comportamentais (resiliência, criatividade) em uma identidade visual única.",
+'risos': {
+        tipo: "unica",
+        titulo: "Branding Pessoal: Quem é a Letícia?",
+        categoria: "Jovem Aprendiz | Identidade & Soft Skills",
+        cliente: "Módulo de Desenvolvimento Pessoal",
+        papel: "Designer Visual e Criativa",
+        objetivo: "Mapear competências comportamentais e pontos fortes para a construção de uma marca pessoal autêntica.",
+        estrategiaVisual: `O desafio foi criar uma representação visual da minha identidade profissional. Utilizei uma composição de "Word Cloud" (nuvem de palavras) e elementos gráficos que equilibram criatividade e dinamismo. A escolha tipográfica e a disposição das palavras foram pensadas para destacar habilidades como resiliência, proatividade e criatividade de forma imediata e impactante.`,
+        descricao: `Este projeto de autoconhecimento foi o ponto de partida para o meu branding pessoal. Em vez de uma apresentação tradicional, desenvolvi uma peça visual única que sintetiza quem eu sou como profissional e como minhas características (soft skills) se conectam com o mercado de trabalho.`,
         analise: {
-            publico: "Recrutadores e Profissionais de RH.",
-            insights: "O autoconhecimento é a base para uma comunicação visual assertiva."
+            publico: "Recrutadores, parceiros de trabalho e rede profissional.",
+            insights: "Traduzir sentimentos e comportamentos em elementos visuais ajuda a fixar a identidade da marca pessoal na mente do público."
         },
         entregáveis: [
-            "Criação de Painel Semântico (Moodboard)",
-            "Design de Nuvem de Palavras e artes tipográficas",
-            "Diagramação de apresentação de perfil profissional"
+            "Criação de Identidade Visual Pessoal",
+            "Mapeamento de Soft Skills e competências",
+            "Design de Nuvem de Palavras (Visual Thinking)",
+            "Composição de Crachá de Características Profissionais"
         ],
-        slides: ["img/risos_1.jpg", "img/risos_2.jpg"],
+        bannerPrincipal: "img/cracha.jpeg", // Certifique-se de que o nome da imagem aqui esteja correto
+        imagens: ["img/cracha.jpeg"], 
         corDestaque: "#3b82f6"
     }
 };
