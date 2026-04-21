@@ -7,30 +7,32 @@ window.onload = function() {
         document.title = `${data.titulo} | Letícia Soares`;
         const container = document.getElementById('project-content');
 
-        // Lógica para decidir o que mostrar no lado esquerdo (Visual)
+        // Lógica para o Visual (Slide ou Imagem Única)
         let visualContent = '';
-        
         if (data.tipo === 'apresentacao') {
-            // Cria um carrossel de slides
             visualContent = `
-                <p class="label-view">Deslize para ver os slides da apresentação</p>
+                <p class="label-view">Deslize para ver os slides</p>
                 <div class="slider-container">
                     <div class="slider-wrapper">
                         ${data.slides.map(slide => `<img src="${slide}" class="slide-img">`).join('')}
                     </div>
                     <div class="slider-controls">
-                        <button onclick="moveSlider(-1)">❮</button>
-                        <button onclick="moveSlider(1)">❯</button>
+                        <button class="slider-btn" onclick="moveSlider(-1)">❮</button>
+                        <button class="slider-btn" onclick="moveSlider(1)">❯</button>
                     </div>
                 </div>
             `;
         } else {
-            // Mantém o formato de banner para Coca e Fotografia
             visualContent = `
-                <p class="label-view">Peça Final: Visual</p>
-                <img src="${data.bannerPrincipal}" alt="Banner Principal" class="main-banner-img">
+                <p class="label-view">Peça Final</p>
+                <img src="${data.bannerPrincipal}" alt="Peça Principal" class="main-banner-img">
             `;
         }
+
+        // Lógica para o Público-Alvo (Só exibe se existir)
+        const targetBox = (data.analise && data.analise.publico) 
+            ? `<div class="target-box-mini"><h4>Público-Alvo</h4><p>${data.analise.publico}</p></div>` 
+            : '';
 
         container.innerHTML = `
             <section class="project-hero" style="border-bottom: 4px solid ${data.corDestaque}">
@@ -48,14 +50,11 @@ window.onload = function() {
                             ${visualContent}
                             
                             <div class="content-block mini-card">
-                                <h4>Minha Atuação</h4>
+                                <h4 style="color: ${data.corDestaque}">Minha Atuação</h4>
                                 <p><strong>${data.papel}</strong></p>
                             </div>
 
-                            <div class="target-box-mini">
-                                <h4>Público-Alvo</h4>
-                                <p>${data.analise.publico}</p>
-                            </div>
+                            ${targetBox}
                         </div>
                     </div>
 
@@ -71,11 +70,19 @@ window.onload = function() {
                         </div>
 
                         <div class="content-block">
-                            <h3>O que foi entregue</h3>
+                            <h3>Entregáveis</h3>
                             <ul class="check-list">
                                 ${data.entregáveis.map(item => `<li>${item}</li>`).join('')}
                             </ul>
                         </div>
+
+                        ${data.imagens && data.tipo !== 'apresentacao' ? `
+                        <div class="content-block">
+                            <h3>Galeria do Processo</h3>
+                            <div class="process-gallery">
+                                ${data.imagens.map(img => `<img src="${img}" class="img-processo">`).join('')}
+                            </div>
+                        </div>` : ''}
                     </div>
                 </div>
             </section>
@@ -83,14 +90,13 @@ window.onload = function() {
     }
 }
 
-// Lógica simples do Carrossel
+// Controle do Carrossel
 let currentSlide = 0;
 function moveSlider(direction) {
     const wrapper = document.querySelector('.slider-wrapper');
     const slides = document.querySelectorAll('.slide-img');
-    const totalSlides = slides.length;
+    if(!wrapper || slides.length === 0) return;
 
-    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-    const offset = currentSlide * -100;
-    wrapper.style.transform = `translateX(${offset}%)`;
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    wrapper.style.transform = `translateX(${-currentSlide * 100}%)`;
 }

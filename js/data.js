@@ -32,38 +32,28 @@ const projetos = {
         imagens: ["img/IMGCoke.jpeg", "img/img3Coke.jpeg"], 
         corDestaque: "#4A5D4E" 
     },
+
     'fotografia': {
-        tipo: "unica", // Peça única como o banner
+        tipo: "unica",
         titulo: "Luz e Sombra: Exercícios de Composição",
         categoria: "Aula de Fotografia",
         cliente: "Centro Universitário FAM",
         papel: "Fotógrafa e Editora Mobile",
         objetivo: "Explorar a narrativa visual através do alto contraste e da ausência de cores.",
-        
-        estrategiaVisual: `Neste exercício acadêmico, o desafio foi despir a imagem de cores para focar exclusivamente na composição, texturas e no jogo de luz e sombra. Utilizando apenas dispositivos móveis, explorei ângulos que transformam objetos cotidianos em formas artísticas, mantendo uma estética Noir e minimalista que ressalta a profundidade de cada cena.`,
-
-        descricao: `O projeto consistiu na captura e edição de fotografias em preto e branco. O objetivo principal foi treinar o "olhar publicitário", onde a composição deve guiar o espectador sem a distração das cores, utilizando recursos técnicos limitados (smartphone) para extrair o máximo de expressividade.`,
-        
+        estrategiaVisual: `Neste exercício acadêmico, o desafio foi despir a imagem de cores para focar exclusivamente na composição, texturas e no jogo de luz e sombra. Explorei ângulos que transformam objetos cotidianos em formas artísticas.`,
+        descricao: `O projeto consistiu na captura e edição de fotografias em preto e branco para treinar o "olhar publicitário", onde a composição deve guiar o espectador sem a distração das cores.`,
         analise: {
-            publico: "Apreciadores de artes visuais e curadoria de conteúdo mobile.",
+            // Removido o público alvo conforme solicitado
             insights: "A fotografia em P&B força o designer a entender melhor o contraste, algo fundamental para criar peças gráficas equilibradas."
         },
-
         entregáveis: [
             "Captação de imagens autorais (Outdoor/Indoor)",
             "Edição e tratamento de imagem mobile",
-            "Estudo de enquadramento e regra dos terços",
-            "Curadoria de portfólio fotográfico"
+            "Estudo de enquadramento e regra dos terços"
         ],
-        
-        bannerPrincipal: "img/foto4.jpeg", // Escolha a sua foto favorita para ser a capa
-        imagens: [
-            "img/foto1.jpeg",
-            "img/foto3.jpeg",
-            "img/foto4.jpeg",
-            "img/foto2.jpeg"
-        ],
-        corDestaque: "#222222" // Um cinza quase preto para combinar com o tema P&B
+        bannerPrincipal: "img/foto4.jpeg",
+        imagens: ["img/foto1.jpeg", "img/foto3.jpeg", "img/foto4.jpeg", "img/foto2.jpeg"],
+        corDestaque: "#222222"
     },
 
 
