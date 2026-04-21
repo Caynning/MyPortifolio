@@ -51,7 +51,7 @@ const projetos = {
             "Edição e tratamento de imagem mobile",
             "Estudo de enquadramento e regra dos terços"
         ],
-        bannerPrincipal: "img/foto4.jpeg",
+        bannerPrincipal: "img/foto5.jpeg",
         imagens: ["img/foto1.jpeg", "img/foto3.jpeg", "img/foto4.jpeg", "img/foto2.jpeg"],
         corDestaque: "#222222"
     },
