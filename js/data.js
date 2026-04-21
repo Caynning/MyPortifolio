@@ -91,7 +91,7 @@ const projetos = {
         titulo: "Módulo VIVA: Sustentabilidade no Dia a Dia",
         categoria: "Jovem Aprendiz | Meio Ambiente",
         cliente: "EchoCharge Brasil",
-        papel: "Pesquisadora e Designer de Soluções Sustentáveis",
+        papel: "Pesquisadora e Designer do Módulo de Apresentação",
         objetivo: "Desenvolver um sistema modular para redução de resíduos e economia de recursos.",
         estrategiaVisual: "A apresentação utiliza uma estética limpa, com tons de verde e elementos que remetem à natureza e tecnologia.",
         descricao: "Projeto focado na criação do 'Módulo VIVA', um sistema para captação de água da chuva e energia solar.",
