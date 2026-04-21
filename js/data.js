@@ -3,6 +3,7 @@ const projetos = {
 
     
     'coca-cola': {
+        tipo: "unica", // Peça única como o banner
         titulo: "Do Diagnóstico à Comunicação: Coca-Cola",
         categoria: "Projeto de Extensão Acadêmica",
         cliente: "Faculdade das Américas (FAM)",
@@ -32,6 +33,7 @@ const projetos = {
         corDestaque: "#4A5D4E" 
     },
     'fotografia': {
+        tipo: "unica", // Peça única como o banner
         titulo: "Luz e Sombra: Exercícios de Composição",
         categoria: "Aula de Fotografia",
         cliente: "Centro Universitário FAM",
@@ -64,87 +66,62 @@ const projetos = {
         corDestaque: "#222222" // Um cinza quase preto para combinar com o tema P&B
     },
 
-    // ... dentro de const projetos = {
 
-    'lixo': {
+
+'lixo': {
+        tipo: "apresentacao", 
         titulo: "Módulo VIVA: Sustentabilidade no Dia a Dia",
         categoria: "Jovem Aprendiz | Meio Ambiente",
         cliente: "EchoCharge Brasil",
-        papel: "Pesquisadora e Designer de Soluções",
-        objetivo: "Desenvolver um sistema modular para redução de resíduos.",
-        estrategiaVisual: "A apresentação foi construída para ser didática e visualmente leve. Usei ícones minimalistas e uma hierarquia de informações que guia o espectador através do problema, da solução técnica e dos benefícios finais.",
-        descricao: "Este deck de slides apresenta o 'Módulo VIVA', um projeto inovador de captação de água e energia solar. O foco foi transformar conceitos técnicos de engenharia sustentável em uma linguagem visual clara para o público final.",
+        papel: "Pesquisadora e Designer de Soluções Sustentáveis",
+        objetivo: "Desenvolver um sistema modular para redução de resíduos e economia de recursos.",
+        estrategiaVisual: "A apresentação utiliza uma estética limpa, com tons de verde e elementos que remetem à natureza e tecnologia.",
+        descricao: "Projeto focado na criação do 'Módulo VIVA', um sistema para captação de água da chuva e energia solar.",
         analise: {
-            publico: "Empresas com foco em ESG e comunidades locais.",
-            insights: "A visualização de dados ajudou a provar que soluções sustentáveis podem ser de baixo custo."
+            publico: "Comunidade local e empresas focadas em ESG.",
+            insights: "Soluções simples de baixo custo geram maior engajamento social."
         },
         entregáveis: [
-            "Apresentação estruturada de projeto (Deck de Slides)",
-            "Manual educativo de consumo consciente",
-            "Identidade visual do Módulo VIVA"
+            "Estudo de viabilidade de módulos sustentáveis",
+            "Criação de manual educativo",
+            "Design de apresentação (Canva)"
         ],
-        bannerPrincipal: "img/lixo_slide1.jpg", // O primeiro slide
-        // Aqui você coloca os slides em ordem:
-        imagens: [
-            "img/lixo_slide1.jpg", 
-            "img/lixo_slide2.jpg", 
-            "img/lixo_slide3.jpg",
-            "img/lixo_slide4.jpg"
-        ],
-        corDestaque: "#10b981",
-        tipoProjeto: "apresentacao" // Adicionamos uma tag para identificar o estilo
+        // Aqui você coloca todos os slides do PDF salvos como imagens
+        slides: ["img/lixo_slide1.jpg", "img/lixo_slide2.jpg", "img/lixo_slide3.jpg", "img/lixo_slide4.jpg"],
+        corDestaque: "#10b981"
     },
-
     'carnaval': {
+        tipo: "apresentacao",
         titulo: "Marchinha Social: Contra o Trabalho Infantil",
         categoria: "Jovem Aprendiz | Impacto Social",
         cliente: "Projeto de Conscientização Social",
-        papel: "Criativa e Comunicadora",
-        objetivo: "Sensibilizar sobre os riscos do trabalho infantil no carnaval.",
-        estrategiaVisual: "Para este material, utilizei um design de alto impacto emocional. O contraste entre cores festivas e dados sérios do ECA cria uma tensão visual necessária para o tema, garantindo que a mensagem não seja ignorada.",
-        descricao: "Uma apresentação de conscientização que une legislação (ECA/ONU) com análise social. Os slides foram pensados para serem lidos de forma rápida, com frases de impacto e imagens que reforçam o direito ao brincar.",
+        papel: "Criativa e Comunicadora Social",
+        objetivo: "Gerar empatia e informar sobre os riscos do trabalho infantil.",
+        estrategiaVisual: "Contraste entre cores vibrantes do carnaval e o peso informativo dos artigos do ECA.",
+        descricao: "Campanha focada na proteção de crianças e adolescentes analisando o impacto do trabalho infantil.",
         analise: {
-            publico: "Sociedade civil e foliões.",
-            insights: "O design ajudou a humanizar os dados frios da lei."
+            publico: "Foliões e órgãos públicos.",
+            insights: "A normalização do trabalho infantil precisa ser combatida com informação."
         },
-        entregáveis: [
-            "Campanha de conscientização em slides",
-            "Infográfico de riscos e direitos",
-            "Relatório de impacto social"
-        ],
-        bannerPrincipal: "img/carnaval_slide1.jpg",
-        imagens: [
-            "img/carnaval_slide1.jpg",
-            "img/carnaval_slide2.jpg",
-            "img/carnaval_slide3.jpg"
-        ],
-        corDestaque: "#f59e0b",
-        tipoProjeto: "apresentacao"
+        entregáveis: ["Análise de riscos", "Infográfico ECA", "Apresentação de conscientização"],
+        slides: ["img/carnaval_1.jpg", "img/carnaval_2.jpg", "img/carnaval_3.jpg", "img/carnaval_4.jpg"],
+        corDestaque: "#f59e0b"
     },
-
     'risos': {
+        tipo: "apresentacao",
         titulo: "Identidade Pessoal e Soft Skills",
         categoria: "Jovem Aprendiz | Desenvolvimento",
         cliente: "Módulo de Desenvolvimento Humano",
         papel: "Autoconhecimento e Branding Pessoal",
-        objetivo: "Mapear competências comportamentais para o mercado.",
-        estrategiaVisual: "O layout utiliza colagens e tipografias variadas para refletir a multiplicidade da personalidade. É uma peça de branding pessoal que foge do corporativo tradicional para mostrar autenticidade.",
-        descricao: "Este conjunto de slides é um exercício de branding pessoal. Através de uma narrativa visual lúdica, apresento minhas 'soft skills' e minha visão de mundo, unindo criatividade e resiliência.",
+        objetivo: "Mapear pontos fortes para o mercado de trabalho.",
+        estrategiaVisual: "Abordagem artística utilizando colagens de palavras (Word Cloud).",
+        descricao: "Mergulho no branding pessoal analisando características como resiliência e criatividade.",
         analise: {
-            publico: "Recrutadores e parceiros criativos.",
-            insights: "Mostrar quem você é de verdade cria conexões mais fortes que um currículo comum."
+            publico: "Recrutadores.",
+            insights: "O autoconhecimento é a base para uma comunicação assertiva."
         },
-        entregáveis: [
-            "Painel Semântico de Identidade",
-            "Mapeamento de Soft Skills",
-            "Deck de Branding Pessoal"
-        ],
-        bannerPrincipal: "img/risos_slide1.jpg",
-        imagens: [
-            "img/risos_slide1.jpg",
-            "img/risos_slide2.jpg"
-        ],
-        corDestaque: "#3b82f6",
-        tipoProjeto: "apresentacao"
+        entregáveis: ["Mapeamento de competências", "Painel semântico"],
+        slides: ["img/risos_1.jpg", "img/risos_2.jpg"],
+        corDestaque: "#3b82f6"
     }
 };

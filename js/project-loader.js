@@ -7,8 +7,33 @@ window.onload = function() {
         document.title = `${data.titulo} | Letícia Soares`;
         const container = document.getElementById('project-content');
 
+        // Lógica para decidir o que mostrar no lado esquerdo (Visual)
+        let visualContent = '';
+        
+        if (data.tipo === 'apresentacao') {
+            // Cria um carrossel de slides
+            visualContent = `
+                <p class="label-view">Deslize para ver os slides da apresentação</p>
+                <div class="slider-container">
+                    <div class="slider-wrapper">
+                        ${data.slides.map(slide => `<img src="${slide}" class="slide-img">`).join('')}
+                    </div>
+                    <div class="slider-controls">
+                        <button onclick="moveSlider(-1)">❮</button>
+                        <button onclick="moveSlider(1)">❯</button>
+                    </div>
+                </div>
+            `;
+        } else {
+            // Mantém o formato de banner para Coca e Fotografia
+            visualContent = `
+                <p class="label-view">Peça Final: Visual</p>
+                <img src="${data.bannerPrincipal}" alt="Banner Principal" class="main-banner-img">
+            `;
+        }
+
         container.innerHTML = `
-            <section class="project-hero">
+            <section class="project-hero" style="border-bottom: 4px solid ${data.corDestaque}">
                 <div class="container">
                     <span class="badge" style="background: ${data.corDestaque}; color: white;">${data.categoria}</span>
                     <h1>${data.titulo}</h1>
@@ -18,18 +43,13 @@ window.onload = function() {
 
             <section class="container">
                 <div class="main-project-grid">
-                    
                     <div class="creative-side">
                         <div class="sticky-content">
-                            <p class="label-view">Peça Final: Banner Publicitário</p>
-                            <img src="${data.bannerPrincipal}" alt="Banner Principal" class="main-banner-img">
+                            ${visualContent}
                             
-                            <div class="content-block" style="background: rgba(166, 68, 68, 0.05); padding: 25px; border-radius: 20px; border-left: 6px solid #A64444; margin-top: 25px;">
-                                <h4 style="color: #A64444; margin-bottom: 10px; font-family: 'Gaegu', cursive; font-size: 1.5rem;">Minha Atuação</h4>
-                                <p style="font-size: 0.95rem; line-height: 1.6;">
-                                    <strong>${data.papel}</strong><br>
-                                    Fui a responsável direta pela concepção visual, layout e edição do banner final, aplicando conceitos de design para facilitar a compreensão dos dados.
-                                </p>
+                            <div class="content-block mini-card">
+                                <h4>Minha Atuação</h4>
+                                <p><strong>${data.papel}</strong></p>
                             </div>
 
                             <div class="target-box-mini">
@@ -40,40 +60,37 @@ window.onload = function() {
                     </div>
 
                     <div class="strategy-side">
-                        
                         <div class="content-block">
-                            <h3>O Desafio Estratégico</h3>
+                            <h3>O Desafio</h3>
                             <p>${data.descricao}</p>
                         </div>
 
-                        <div class="content-block" style="background: #fff; padding: 30px; border-radius: 24px; box-shadow: var(--shadow-soft);">
-                            <h3 style="color: var(--verde-musgo);">Reposicionamento e Estratégia Visual</h3>
-                            <p style="font-size: 1.1rem; color: #444; line-height: 1.8; margin-top: 15px;">
-                                ${data.estrategiaVisual}
-                            </p>
+                        <div class="content-block strategy-card">
+                            <h3>Estratégia e Conceito</h3>
+                            <p>${data.estrategiaVisual}</p>
                         </div>
 
                         <div class="content-block">
-                            <h3>Entregas Técnicas (ABNT)</h3>
+                            <h3>O que foi entregue</h3>
                             <ul class="check-list">
-                                ${data.entregáveis.map(item => `
-                                    <li>${item}</li>
-                                `).join('')}
+                                ${data.entregáveis.map(item => `<li>${item}</li>`).join('')}
                             </ul>
                         </div>
-
-                        <div class="content-block">
-                            <h3>Imagens do Processo / Diagnóstico</h3>
-                            <div class="process-gallery">
-                                ${data.imagens.map(img => `
-                                    <img src="${img}" class="img-processo" alt="Imagem do processo">
-                                `).join('')}
-                            </div>
-                        </div>
                     </div>
-
                 </div>
             </section>
         `;
     }
+}
+
+// Lógica simples do Carrossel
+let currentSlide = 0;
+function moveSlider(direction) {
+    const wrapper = document.querySelector('.slider-wrapper');
+    const slides = document.querySelectorAll('.slide-img');
+    const totalSlides = slides.length;
+
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    const offset = currentSlide * -100;
+    wrapper.style.transform = `translateX(${offset}%)`;
 }
