@@ -55,7 +55,35 @@ const projetos = {
         imagens: ["img/foto1.jpeg", "img/foto3.jpeg", "img/foto4.jpeg", "img/foto2.jpeg"],
         corDestaque: "#222222"
     },
-
+'tabagismo': {
+        tipo: "apresentacao",
+        titulo: "Tabagismo Juvenil: Identidade e Rebeldia",
+        categoria: "Pesquisa e Análise de Dados | Publicidade",
+        cliente: "Faculdade das Américas (FAM)",
+        papel: "Pesquisadora e Designer de Apresentação",
+        objetivo: "Analisar a percepção do ato de fumar como construção de identidade entre jovens de 18 a 25 anos.",
+        estrategiaVisual: "Utilização de gráficos limpos e uma paleta 'Dark Modern' (preto e verde) para transmitir seriedade e profundidade ao tema acadêmico.",
+        descricao: "Este estudo utilizou métodos quantitativos e qualitativos (via Google Forms) com 62 participantes para validar a hipótese de que o tabagismo é frequentemente visto como uma manifestação de autonomia e rebeldia na transição para a vida adulta.",
+        analise: {
+            publico: "Jovens adultos, órgãos de saúde e estrategistas de comunicação pública.",
+            insights: "O fumo não é visto como crescimento pessoal, mas sim como um 'escape' emocional ou comportamento social de grupo."
+        },
+        entregáveis: [
+            "Elaboração de questionário estruturado",
+            "Tratamento de dados estatísticos",
+            "Criação de gráficos percentuais",
+            "Design de apresentação executiva"
+        ],
+        // Lembre-se de salvar os slides do PDF como imagens .jpg e colocar na pasta img/
+        slides: [
+            "img/tabaco_slide1.jpg", 
+            "img/tabaco_slide2.jpg", 
+            "img/tabaco_slide3.jpg", 
+            "img/tabaco_slide4.jpg",
+            "img/tabaco_slide5.jpg"
+        ],
+        corDestaque: "#1DB954" // Um verde vibrante para combinar com o PDF
+    },
 
 
 'lixo': {
