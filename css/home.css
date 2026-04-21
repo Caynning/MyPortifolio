@@ -187,10 +187,13 @@ main {
     font-weight: 700;
 }
 
-/* 4. Footer Principal */
-.main-footer {
-    background: var(--verde-musgo);
-    color: var(--branco);
+/* ==========================================================================
+   4. FOOTER PRINCIPAL (CONTATO)
+   ========================================================================== */
+
+footer#contato {
+    background-color: var(--verde-musgo) !important;
+    color: var(--branco) !important;
     border-radius: 50px;
     padding: 5rem 2rem;
     text-align: center;
@@ -199,49 +202,86 @@ main {
     margin-top: 5rem;
 }
 
-.main-footer h3 { font-size: 3.5rem; margin-bottom: 1rem; }
-.footer-tagline { font-family: var(--font-title); font-size: 2rem; opacity: 0.8; margin-bottom: 3rem; }
-
-.contact-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 4rem;
+/* Título e Frase manuscrita */
+footer#contato h3 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--branco);
 }
 
-.btn-contact {
-    background: var(--branco);
-    color: var(--verde-musgo);
+footer#contato .font-handwritten {
+    color: var(--ocre-suave) !important;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    opacity: 1;
+}
+
+/* Botões de E-mail e WhatsApp */
+footer#contato .flex.flex-wrap.justify-center.gap-6 a {
+    background-color: var(--branco) !important;
+    color: var(--verde-musgo) !important; /* Texto escuro no fundo branco */
     padding: 1.2rem 2.5rem;
-    border-radius: 18px;
+    border-radius: 20px;
     font-weight: 700;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.btn-contact:hover {
-    background: var(--vermelho-terra);
-    color: var(--branco);
+footer#contato .flex.flex-wrap.justify-center.gap-6 a:hover {
+    background-color: var(--vermelho-terra) !important;
+    color: var(--branco) !important; /* FORÇA o texto branco no fundo vermelho */
     transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-.social-links {
+/* Ícones dentro dos botões */
+footer#contato .flex.flex-wrap.justify-center.gap-6 a i {
+    font-size: 1.2rem;
+}
+
+/* Redes Sociais (Linkedin e Instagram) */
+.social-footer-links {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 2.5rem;
+    margin-top: 4rem;
 }
 
-.social-links a {
+.social-footer-links a {
     color: var(--branco);
-    opacity: 0.5;
-    font-size: 0.7rem;
-    font-weight: 700;
+    opacity: 0.5; /* Mais suave por padrão */
+    font-size: 0.75rem;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 2px;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
-.social-links a:hover { opacity: 1; }
+.social-footer-links a:hover {
+    opacity: 1;
+    color: var(--ocre-suave);
+    transform: scale(1.1);
+}
+
+/* Copyright e Detalhes Finais */
+footer#contato p.mt-16 {
+    color: var(--branco);
+    font-size: 10px;
+    opacity: 0.4;
+    letter-spacing: 1px;
+    margin-top: 4rem;
+}
+
+/* Elementos decorativos flutuantes */
+footer#contato .absolute {
+    user-select: none;
+    z-index: 1;
+}
 
 /* 5. Responsividade Geral */
 @media (max-width: 1024px) {
