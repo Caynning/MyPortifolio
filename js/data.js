@@ -66,7 +66,7 @@ const projetos = {
 
     
 
-    'lixo': {
+'lixo': {
         titulo: "Módulo VIVA: Sustentabilidade no Dia a Dia",
         categoria: "Jovem Aprendiz | Meio Ambiente",
         cliente: "EchoCharge Brasil",
@@ -74,6 +74,10 @@ const projetos = {
         objetivo: "Desenvolver um sistema modular para redução de resíduos e economia de recursos.",
         estrategiaVisual: "A apresentação utiliza uma estética limpa, com tons de verde e elementos que remetem à natureza e tecnologia. O foco foi tornar dados complexos de engenharia sustentável em algo visualmente acessível e educativo.",
         descricao: "Projeto focado na criação do 'Módulo VIVA', um sistema para captação de água da chuva e energia solar. Trabalhei no levantamento de benefícios ambientais e na estruturação do guia de economia de água e energia.",
+        analise: {
+            publico: "Comunidade local e empresas focadas em ESG.",
+            insights: "Soluções simples de baixo custo geram maior engajamento social em sustentabilidade."
+        },
         entregáveis: [
             "Estudo de viabilidade de módulos sustentáveis",
             "Criação de manual educativo de consumo consciente",
@@ -93,6 +97,10 @@ const projetos = {
         objetivo: "Gerar empatia e informar sobre os riscos do trabalho infantil durante grandes festividades.",
         estrategiaVisual: "Utilizei um contraste entre as cores vibrantes do carnaval e o peso informativo dos artigos do ECA. O design busca capturar a atenção para um tema sensível através de uma narrativa visual clara e urgente.",
         descricao: "Desenvolvimento de campanha focada na proteção de crianças e adolescentes. O projeto analisou o impacto físico e psicológico do trabalho precoce nas ruas e utilizou a legislação (ECA e ONU) como base para propostas de proteção.",
+        analise: {
+            publico: "Foliões, órgãos públicos e sociedade civil.",
+            insights: "A normalização do trabalho infantil no carnaval precisa ser combatida com informação legal e apelo emocional."
+        },
         entregáveis: [
             "Análise de riscos sociais (Violência e Exploração)",
             "Infográfico sobre Direitos da Criança e Adolescente (ECA)",
@@ -112,6 +120,10 @@ const projetos = {
         objetivo: "Mapear pontos fortes e competências comportamentais para o mercado de trabalho.",
         estrategiaVisual: "Uma abordagem mais artística e livre, utilizando colagens de palavras (Word Cloud) para expressar traços de personalidade como resiliência, criatividade e otimismo.",
         descricao: "Este projeto foi um mergulho no branding pessoal. Analisei minhas principais características (Curiosa, Prestativa, Resiliente) e como essas 'soft skills' contribuem para o ambiente profissional e criativo.",
+        analise: {
+            publico: "Recrutadores e parceiros de equipe.",
+            insights: "O autoconhecimento é a base para uma comunicação assertiva e proativa no ambiente de trabalho."
+        },
         entregáveis: [
             "Mapeamento de competências (Soft Skills)",
             "Painel semântico de identidade pessoal",
@@ -121,5 +133,5 @@ const projetos = {
         bannerPrincipal: "img/risos_capa.jpg",
         imagens: ["img/risos_detalhe1.jpg"],
         corDestaque: "#3b82f6"
-    },
+    }
 };
