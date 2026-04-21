@@ -67,11 +67,16 @@ const projetos = {
             "Diagramação de apresentação executiva"
         ],
         slides: [
-            "img/tabaco_slide1.jpg", 
-            "img/tabaco_slide2.jpg", 
-            "img/tabaco_slide3.jpg", 
-            "img/tabaco_slide4.jpg",
-            "img/tabaco_slide5.jpg"
+            "img/taba/taba1.jpeg",
+            "img/taba/taba2.jpeg",
+            "img/taba/taba3.jpeg",
+            "img/taba/taba4.jpeg",
+            "img/taba/taba5.jpeg",
+            "img/taba/taba6.jpeg",
+            "img/taba/taba7.jpeg",
+            "img/taba/taba8.jpeg",
+            "img/taba/taba9.jpeg",
+            "img/taba/taba10.jpeg"
         ],
         corDestaque: "#1DB954"
     },
@@ -128,7 +133,7 @@ const projetos = {
             corDestaque: "#f59e0b"
         },
 
-'risos': {
+    'risos': {
         tipo: "unica",
         titulo: "Branding Pessoal: Quem é a Letícia?",
         categoria: "Jovem Aprendiz | Identidade & Soft Skills",
