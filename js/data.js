@@ -94,7 +94,7 @@ const projetos = {
             "Design e diagramação de manual educativo",
             "Criação de apresentação visual (Canva) e iconografia"
         ],
-        slides: ["img/lixo_slide1.jpg", "img/lixo_slide2.jpg", "img/lixo_slide3.jpg", "img/lixo_slide4.jpg"],
+        slides: ["img/viva/viva(1).jpeg", "img/viva/viva(2).jpeg", "img/viva/viva(3).jpeg", "img/viva/viva(4).jpeg", "img/viva/viva(5).jpeg", "img/viva/viva(6).jpeg", "img/viva/viva(7).jpeg", "img/viva/viva(8).jpeg", "img/viva/viva(9).jpeg", "img/viva/viva(10).jpeg", "img/viva/viva(11).jpeg", "img/viva/viva(12).jpeg"],
         corDestaque: "#10b981"
     },
 

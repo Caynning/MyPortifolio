@@ -258,3 +258,62 @@
         padding: 0 15px !important; /* Espaçamento nas bordas do celular */
     }
 }
+/* --- AJUSTE DO SLIDER (CARROSSEL) --- */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9; /* Mantém a proporção de slide padrão */
+    overflow: hidden; /* Corta o que sobrar */
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    background: #000; /* Fundo preto para imagens que não preencherem tudo */
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.slide-img {
+    min-width: 100%; /* Cada imagem ocupa exatamente a largura do container */
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajusta a imagem dentro do espaço sem cortar, ideal para slides */
+    display: block;
+}
+
+/* Controles do Slider */
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none; /* Garante que o container não bloqueie cliques */
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.slider-btn {
+    pointer-events: auto; /* Reativa o clique nos botões */
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.slider-btn:hover {
+    background: white;
+    transform: scale(1.1);
+}
