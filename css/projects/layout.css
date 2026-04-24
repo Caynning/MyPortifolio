@@ -13,13 +13,12 @@
 
 /* --- Navegação (Botão Voltar) --- */
 .project-nav {
-    padding: 30px 25px;
-    position: absolute;
+    padding: 20px 25px;
+    position: fixed; /* Mudado de absolute para fixed */
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 1001; /* Fica acima do hero */
 }
-
 .btn-back {
     display: inline-flex;
     align-items: center;
@@ -41,17 +40,31 @@
     color: white !important;
 }
 
-/* --- Hero Area --- */
+
+
+/* 2. O Hero agora gruda no topo */
 .project-hero {
     width: 100%;
-    padding: 140px 20px 80px; 
+    padding: 140px 20px 60px; 
     text-align: center;
-    background: white;
+    background: rgba(255, 255, 255, 0.95); /* Leve transparência para ver o fundo */
+    backdrop-filter: blur(10px); /* Efeito de vidro desfocado ao rolar */
     border-radius: 0 0 50px 50px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     margin-bottom: 60px;
+    
+    /* MÁGICA AQUI */
+    position: sticky;
+    top: -100px; /* Ele sobe um pouco e "trava" na parte importante */
+    z-index: 1000;
+    transition: all 0.4s ease;
+}
+
+/* 3. Ajuste para o conteúdo não "pular" quando o hero gruda */
+#project-content {
+    flex: 1 0 auto;
     position: relative;
-    z-index: 2;
+    z-index: 5;
 }
 
 /* --- Grid Principal --- */
