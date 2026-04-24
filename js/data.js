@@ -52,9 +52,10 @@ const projetos = {
         titulo: "Tabagismo Juvenil: Identidade e Rebeldia",
         categoria: "Pesquisa e Análise de Dados | Publicidade",
         cliente: "Faculdade das Américas (FAM)",
-        papel: "Designer Visual e de Apresentação",
+    
         objetivo: "Analisar a percepção do ato de fumar como construção de identidade entre jovens de 18 a 25 anos.",
-        estrategiaVisual: "Fui responsável por toda a identidade visual da apresentação, utilizando uma estética 'Dark Modern' com alto contraste entre preto e verde. O objetivo foi criar uma atmosfera séria e impactante que fizesse jus à profundidade do tema acadêmico, organizando dados complexos em gráficos limpos e de fácil leitura.",
+        papel: "Responsável pela Análise de Dados e Design de Apresentação",
+        estrategiaVisual: "Fui responsável pela análise dos dados e por toda a identidade visual da apresentação, utilizando uma estética 'Dark Modern' com alto contraste...",
         descricao: "Este estudo validou a hipótese de que o tabagismo é frequentemente visto como uma manifestação de autonomia. Minha contribuição central foi a materialização desses dados em uma apresentação executiva visualmente coesa e profissional.",
         analise: {
             publico: "Jovens adultos, órgãos de saúde e estrategistas de comunicação pública.",
@@ -84,7 +85,7 @@ const projetos = {
         tipo: "apresentacao", 
         titulo: "Módulo VIVA: Sustentabilidade no Dia a Dia",
         categoria: "Jovem Aprendiz | Meio Ambiente",
-        cliente: "EchoCharge Brasil",
+        cliente: "EchoCharge Brasil (Empresa Fictícia)",
         papel: "Lead Visual Designer do Projeto",
         objetivo: "Desenvolver um sistema modular para redução de resíduos e economia de recursos.",
         estrategiaVisual: "Como designer, projetei a apresentação utilizando tons de verde e elementos orgânicos para reforçar o conceito de sustentabilidade. Foquei na hierarquia visual para tornar os manuais educativos e as explicações técnicas do 'Módulo VIVA' acessíveis e visualmente atraentes.",
@@ -132,27 +133,24 @@ const projetos = {
             corDestaque: "#f59e0b"
         },
 
-    'risos': {
+'risos': {
         tipo: "unica",
         titulo: "Branding Pessoal: Quem é a Letícia?",
-        categoria: "Jovem Aprendiz | Identidade & Soft Skills",
+        categoria: "Identidade & Soft Skills", // Removido "Jovem Aprendiz"
         cliente: "Módulo de Desenvolvimento Pessoal",
         papel: "Designer Visual e Criativa",
-        objetivo: "Mapear competências comportamentais e pontos fortes para a construção de uma marca pessoal autêntica.",
-        estrategiaVisual: `O desafio foi criar uma representação visual da minha identidade profissional. Utilizei uma composição de "Word Cloud" (nuvem de palavras) e elementos gráficos que equilibram criatividade e dinamismo. A escolha tipográfica e a disposição das palavras foram pensadas para destacar habilidades como resiliência, proatividade e criatividade de forma imediata e impactante.`,
-        descricao: `Este projeto de autoconhecimento foi o ponto de partida para o meu branding pessoal. Em vez de uma apresentação tradicional, desenvolvi uma peça visual única que sintetiza quem eu sou como profissional e como minhas características (soft skills) se conectam com o mercado de trabalho.`,
-        analise: {
-            publico: "Recrutadores, parceiros de trabalho e rede profissional.",
-            insights: "Traduzir sentimentos e comportamentos em elementos visuais ajuda a fixar a identidade da marca pessoal na mente do público."
-        },
+        objetivo: "Mapear competências comportamentais para a construção de uma marca pessoal autêntica.",
+        estrategiaVisual: `O desafio foi criar uma representação visual da minha identidade profissional...`,
+        descricao: `Este projeto de autoconhecimento foi o ponto de partida para o meu branding pessoal...`,
+        // Removido o campo analise (público-alvo) daqui
         entregáveis: [
             "Criação de Identidade Visual Pessoal",
             "Mapeamento de Soft Skills e competências",
             "Design de Nuvem de Palavras (Visual Thinking)",
             "Composição de Crachá de Características Profissionais"
         ],
-        bannerPrincipal: "img/cracha.jpeg", // Certifique-se de que o nome da imagem aqui esteja correto
-        imagens: ["img/cracha.jpeg"], 
+        bannerPrincipal: "img/cracha.jpeg",
+        // Removido o array imagens (galeria) daqui
         corDestaque: "#3b82f6"
     },
 

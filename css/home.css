@@ -1,6 +1,6 @@
 /* HOME.CSS - Estrutura da Página Inicial e Sidebar */
 
-/* 1. Sidebar Fixa */
+/* 1. Sidebar Fixa com Scroll Independente */
 .sidebar {
     height: 100vh;
     width: 280px;
@@ -14,12 +14,47 @@
     flex-direction: column;
     z-index: 1000;
     box-shadow: 4px 0 20px rgba(0,0,0,0.1);
+    
+    /* --- AS DUAS LINHAS MÁGICAS --- */
+    overflow-y: auto;          /* Ativa o scroll vertical quando necessário */
+    scrollbar-width: thin;     /* Deixa a barra de rolagem fininha (Firefox) */
 }
 
+/* Personalização da barra de rolagem para Chrome/Edge/Safari */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+/* Garante que o cabeçalho não encolha */
 .sidebar-header {
     text-align: center;
     margin-bottom: 2.5rem;
+    flex-shrink: 0; /* Impede que o topo seja "esmagado" para caber o menu */
 }
+
+/* Ajuste no menu para não comprimir os itens */
+.nav-menu {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+    padding-left: 1rem;
+    flex-shrink: 0; /* Garante que os links mantenham seu tamanho original */
+}
+
+/* Garante que o rodapé da sidebar (botão download) sempre apareça */
+.sidebar div.pt-6 {
+    flex-shrink: 0;
+    padding-bottom: 2rem; /* Espaço extra para não colar no fim da tela */
+}
+
+
 
 .profile-container {
     width: 100px;

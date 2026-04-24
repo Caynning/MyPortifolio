@@ -10,46 +10,42 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/style.css">
 
     <script src="js/data.js" defer></script>
     <script src="js/project-loader.js" defer></script>
 </head>
-<body>
-
-<aside class="sidebar">
-    <div class="sidebar-header"> 
-        <div class="profile-container">
-            <img src="img/tontaredonda.jpeg" alt="Letícia Soares">
+<body class="bg-[#FDF9F3]"> <aside class="sidebar">
+        <div class="sidebar-header"> 
+            <div class="profile-container">
+                <img src="img/tontaredonda.jpeg" alt="Letícia Soares">
+            </div>
+            <h1 class="font-bold">Letícia Soares</h1>
+            <p class="subtitle">Publicitária & Criativa</p>
         </div>
-        <h1 class="font-bold">Letícia Soares</h1>
-        <p class="subtitle">Publicitária & Criativa</p>
-    </div>
 
-    <nav class="nav-menu font-handwritten">
-        <a href="#inicio" class="nav-link">✦ Início</a>
+        <nav class="nav-menu font-handwritten">
+            <a href="#inicio" class="nav-link">✦ Início</a>
+            <a href="#ficticios" class="nav-link">✦ Laboratório Criativo</a> 
+            <a href="#projetos" class="nav-link">✦ Projetos Universitários</a>
+            <a href="#aprendiz" class="nav-link">✦ Impacto Social</a>
+            <a href="#experiencia" class="nav-link">✦ Formação</a>
+            <a href="#habilidades" class="nav-link">✦ Habilidades</a>
+            <a href="#contato" class="nav-link">✦ Contato</a>
+        </nav>
 
-        <a href="#ficticios" class="nav-link">✦ Criações Fictícias</a> 
-        <a href="#projetos" class="nav-link">✦ Projetos Universitários</a>
-
-        <a href="#aprendiz" class="nav-link">✦ Jovem Aprendiz</a>
-        <a href="#experiencia" class="nav-link">✦ Formação</a>
-        <a href="#habilidades" class="nav-link">✦ Habilidades</a>
-        <a href="#contato" class="nav-link">✦ Contato</a>
-    </nav>
-
-    <div class="pt-6 border-t border-white/10">
-        <a href="pdf/Curriculo_Leticia_Soares.pdf" download class="btn-download">
-            <i class="fa-solid fa-download"></i> Baixar Currículo
-        </a>
-    </div>
-</aside>
+        <div class="pt-6 border-t border-white/10">
+            <a href="pdf/Curriculo_Leticia_Soares.pdf" download class="btn-download">
+                <i class="fa-solid fa-download"></i> Baixar Currículo
+            </a>
+        </div>
+    </aside>
 
     <main>
-        
-        <section id="inicio" class="mb-32 flex flex-col lg:flex-row items-center gap-12">
+        <section id="inicio" class="mb-32 flex flex-col lg:flex-row items-center gap-12 pt-10">
             <div class="flex-1">
                 <span class="text-vermelho-terra font-bold text-xs uppercase tracking-widest bg-vermelho-terra/10 px-4 py-2 rounded-full">Bem-vindo(a) ao meu mundo</span>
                 <h2 class="text-5xl md:text-6xl font-bold mt-6 mb-8 leading-tight">
@@ -59,44 +55,43 @@
                     Sou a <strong>Letícia</strong>, estudante de Publicidade na FAM. Transformo ideias em experiências visuais usando <strong>Canva</strong> e <strong>CapCut</strong>. Meu foco é unir estética à responsabilidade social.
                 </p>
             </div>
-                <div class="w-64 h-64 float-anim opacity-90 hidden md:block">
-                    <img src="img/tonta.jpeg" alt="Letícia Soares" class="w-full h-full object-contain">
-                </div>
+            <div class="w-64 h-64 float-anim opacity-90 hidden md:block">
+                <img src="img/tonta.jpeg" alt="Letícia Soares" class="w-full h-full object-contain">
+            </div>
         </section>
-<section id="ficticios" class="mb-32">
-    <h3 class="text-4xl font-bold mb-12 flex items-center gap-4 text-ocre-suave">
-        Laboratório Criativo <span class="h-px flex-1 bg-ocre-suave/30"></span>
-    </h3>
 
-    <div class="projects-grid">
-        <div class="card-projeto" onclick="location.href='projects.html?id=batata-frita'">
-            <div class="project-img-container">
-                <img src="img/ficticios/capa-batata.png" alt="Campanha Batata Frita">
-                <div class="project-overlay" style="background: linear-gradient(to top, rgba(184, 92, 56, 0.9), transparent);">
-                    <div class="overlay-content">
-                        <span class="category-tag" style="background: #ffc107; color: #000;">Projeto Autoral</span>
-                        <h4>Crunchy Fries</h4>
-                        <p>Produção audiovisual fictícia para marca de snacks, focada em Reels.</p>
-                        <div class="skills-wrapper">
-                            <span class="skill-tag-mini">Edição Vertical</span>
-                            <span class="skill-tag-mini">UGC Style</span>
+        <section id="ficticios" class="mb-32">
+            <h3 class="text-4xl font-bold mb-12 flex items-center gap-4 text-ocre-suave">
+                Laboratório Criativo <span class="h-px flex-1 bg-ocre-suave/30"></span>
+            </h3>
+            <div class="projects-grid">
+                <div class="card-projeto" onclick="location.href='projects.html?id=batata-frita'">
+                    <div class="project-img-container">
+                        <img src="img/ficticios/capa-batata.png" alt="Campanha Batata Frita">
+                        <div class="project-overlay" style="background: linear-gradient(to top, rgba(184, 92, 56, 0.9), transparent);">
+                            <div class="overlay-content">
+                                <span class="category-tag" style="background: #ffc107; color: #000;">Projeto Autoral</span>
+                                <h4>Crunchy Fries</h4>
+                                <p>Produção audiovisual fictícia para snacks, focada em Reels.</p>
+                                <div class="skills-wrapper">
+                                    <span class="skill-tag-mini">Edição Vertical</span>
+                                    <span class="skill-tag-mini">UGC Style</span>
+                                </div>
+                                <span class="btn-ver-mais">Assistir Vídeo <i class="fa-solid fa-play"></i></span>
+                            </div>
                         </div>
-                        <span class="btn-ver-mais">Assistir Vídeo <i class="fa-solid fa-play"></i></span>
                     </div>
                 </div>
+                <div class="card-projeto opacity-60 border-2 border-dashed border-gray-300 flex items-center justify-center rounded-[40px] min-h-[250px]">
+                    <p class="text-gray-400 font-bold italic">Novo projeto em breve...</p>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="card-projeto opacity-60 border-2 border-dashed border-gray-300 flex items-center justify-center rounded-[40px]">
-            <p class="text-gray-400 font-bold italic">Novo projeto em breve...</p>
-        </div>
-    </div>
-</section>
         <section id="projetos" class="mb-32">
             <h3 class="text-4xl font-bold mb-12 flex items-center gap-4">
                 Projetos Universitários <span class="h-px flex-1 bg-ocre-suave/30"></span>
             </h3>
-
             <div class="projects-grid">
                 <div class="card-projeto" onclick="location.href='projects.html?id=coca-cola'">
                     <div class="project-img-container">
@@ -115,7 +110,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="card-projeto" onclick="location.href='projects.html?id=fotografia'">
                     <div class="project-img-container">
                         <img src="img/foto1.jpeg" alt="Fotografia P&B">
@@ -133,7 +127,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="card-projeto" onclick="location.href='projects.html?id=tabagismo'">
                     <div class="project-img-container">
                         <img src="img/taba/taba1.jpeg" alt="Pesquisa Tabagismo"> 
@@ -141,43 +134,36 @@
                             <div class="overlay-content">
                                 <span class="category-tag">Pesquisa & Dados</span>
                                 <h4>Tabagismo Juvenil</h4>
-                                <p>Estudo sobre hábitos e construção de identidade em jovens.</p>
+                                <p>Estudo sobre hábitos e construção de identidade.</p>
                                 <div class="skills-wrapper">
                                     <span class="skill-tag-mini">Análise de Dados</span>
                                     <span class="skill-tag-mini">Infográficos</span>
                                 </div>
-                                <span class="btn-ver-mais">Ver Case Completo <i class="fa-solid fa-chart-line"></i></span>
+                                <span class="btn-ver-mais">Ver Case <i class="fa-solid fa-chart-line"></i></span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
         </section>
 
-
         <section id="aprendiz" class="mb-32">
             <h3 class="text-4xl font-bold mb-12 flex items-center gap-4 text-vermelho-terra">
-                Projetos Jovem Aprendiz <span class="h-px flex-1 bg-vermelho-terra/10"></span>
+                Impacto Social <span class="h-px flex-1 bg-vermelho-terra/10"></span>
             </h3>
-
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-3xl border-l-8 border-green-600 shadow-sm hover:shadow-md transition-all cursor-pointer" onclick="location.href='projects.html?id=lixo'">
                     <h4 class="font-bold text-lg">Módulo VIVA</h4>
                     <p class="text-sm text-gray-500 mt-2">Soluções sustentáveis e economia de recursos.</p>
                     <span class="text-green-600 text-xs font-bold mt-4 block">VER PROJETO →</span>
                 </div>
-
                 <div class="bg-white p-8 rounded-3xl border-l-8 border-yellow-500 shadow-sm hover:shadow-md transition-all cursor-pointer" onclick="location.href='projects.html?id=carnaval'">
                     <h4 class="font-bold text-lg">Marchinha Social</h4>
-                    <p class="text-sm text-gray-500 mt-2">Campanha criativa contra o trabalho infantil no Carnaval.</p>
+                    <p class="text-sm text-gray-500 mt-2">Campanha contra o trabalho infantil no Carnaval.</p>
                     <span class="text-yellow-600 text-xs font-bold mt-4 block">VER PROJETO →</span>
                 </div>
-
                 <div class="bg-white p-8 rounded-3xl border-l-8 border-blue-500 shadow-sm hover:shadow-md transition-all cursor-pointer" onclick="location.href='projects.html?id=risos'">
-                    <h4 class="font-bold text-lg">Identidade e Risos</h4>
+                    <h4 class="font-bold text-lg">Identidade Visual</h4>
                     <p class="text-sm text-gray-500 mt-2">Desenvolvimento de Branding Pessoal e Soft Skills.</p>
                     <span class="text-blue-600 text-xs font-bold mt-4 block">VER PROJETO →</span>
                 </div>
@@ -185,111 +171,107 @@
         </section>
 
         <section id="experiencia" class="mb-32">
-    <h3 class="text-4xl font-bold mb-12 flex items-center gap-4">
-        Trajetória Profissional <span class="h-px flex-1 bg-ocre-suave/30"></span>
+            <h3 class="text-4xl font-bold mb-12 flex items-center gap-4">
+                Trajetória Profissional <span class="h-px flex-1 bg-ocre-suave/30"></span>
+            </h3>
+            <div class="space-y-8">
+                <div class="bg-white p-8 rounded-[30px] shadow-sm border-2 border-ocre-suave/20 flex flex-col md:flex-row justify-between gap-4">
+                    <div>
+                        <span class="text-vermelho-terra font-bold text-xs uppercase tracking-widest">Ensino Superior</span>
+                        <h4 class="text-2xl font-bold text-verde-musgo mt-1">Publicidade e Propaganda (Cursando)</h4>
+                        <p class="text-gray-600">FAM - Centro Universitário das Américas</p>
+                    </div>
+                    <div class="md:text-right">
+                        <span class="bg-verde-musgo/10 text-verde-musgo px-4 py-1 rounded-full text-xs font-bold">Conclusão: 12/2028</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-[30px] shadow-sm border-2 border-ocre-suave/20 flex flex-col md:flex-row justify-between gap-4">
+                    <div>
+                        <span class="text-vermelho-terra font-bold text-xs uppercase tracking-widest">Experiência Recente</span>
+                        <h4 class="text-2xl font-bold text-verde-musgo mt-1">Estagiária de Marketing (Temporário)</h4>
+                        <p class="text-gray-600">Nube - Núcleo Brasileiro de Estágios</p>
+                        <p class="text-sm text-gray-500 mt-2 italic">Atendimento, suporte a eventos corporativos e gestão de plataforma.</p>
+                    </div>
+                    <div class="md:text-right text-gray-500 font-bold text-sm">03/2026 — 04/2026</div>
+                </div>
+
+                <div class="bg-white p-8 rounded-[30px] shadow-sm border-2 border-ocre-suave/20 flex flex-col md:flex-row justify-between gap-4">
+                    <div>
+                        <span class="text-vermelho-terra font-bold text-xs uppercase tracking-widest">Educação Complementar</span>
+                        <h4 class="text-2xl font-bold text-verde-musgo mt-1">Cursos de Especialização</h4>
+                        <ul class="text-gray-600 text-sm mt-2 list-disc list-inside">
+                            <li>Fundamentos do Design Gráfico — Fundação Bradesco</li>
+                            <li>Fotografia com Celular — Senac SP</li>
+                            <li>Inteligência Artificial Aplicada ao Marketing</li>
+                        </ul>
+                    </div>
+                    <div class="md:text-right text-gray-500 font-bold text-sm">2025 — 2026</div>
+                </div>
+            </div>
+        </section>
+
+<section id="habilidades" class="mb-32">
+    <h3 class="text-4xl font-bold mb-12 flex items-center gap-4 text-verde-musgo">
+        Qualificações & Habilidades <span class="h-px flex-1 bg-verde-musgo/10"></span>
     </h3>
-    
-    <div class="space-y-8">
-        <div class="bg-white p-8 rounded-[30px] shadow-sm border-2 border-ocre-suave/20 flex flex-col md:flex-row justify-between gap-4">
-            <div>
-                <span class="text-vermelho-terra font-bold text-xs uppercase tracking-widest">Ensino Superior</span>
-                <h4 class="text-2xl font-bold text-verde-musgo mt-1">Publicidade e Propaganda (Cursando)</h4>
-                <p class="text-gray-600">FAM - Centro Universitário das Américas </p>
-            </div>
-            <div class="md:text-right">
-                <span class="bg-verde-musgo/10 text-verde-musgo px-4 py-1 rounded-full text-xs font-bold">Conclusão: 12/2028</span>
-            </div>
-        </div>
-
-        <div class="bg-white p-8 rounded-[30px] shadow-sm border-2 border-ocre-suave/20 flex flex-col md:flex-row justify-between gap-4">
-            <div>
-                <span class="text-vermelho-terra font-bold text-xs uppercase tracking-widest">Experiência Recente</span>
-                <h4 class="text-2xl font-bold text-verde-musgo mt-1">Estagiária de Marketing(Temporário)</h4>
-                <p class="text-gray-600">Nube - Núcleo Brasileiro de Estágios</p>
-                <p class="text-sm text-gray-500 mt-2 italic">Atendimento, suporte a eventos corporativos e gestão de plataforma.</p>
-            </div>
-            <div class="md:text-right text-gray-500 font-bold text-sm">
-                03/2026 — 04/2026
-            </div>
-        </div>
-
-        <div class="bg-white p-8 rounded-[30px] shadow-sm border-2 border-ocre-suave/20 flex flex-col md:flex-row justify-between gap-4">
-            <div>
-                <span class="text-vermelho-terra font-bold text-xs uppercase tracking-widest">Desenvolvimento Social</span>
-                <h4 class="text-2xl font-bold text-verde-musgo mt-1">Jovem Aprendiz</h4>
-                <p class="text-gray-600">Extra (GPA) / EchoCharge Brasil</p>
-                <p class="text-sm text-gray-500 mt-2 italic">Foco em atendimento inclusivo (PCD) e desenvolvimento de projetos sustentáveis (ESG).</p>
-            </div>
-            <div class="md:text-right text-gray-500 font-bold text-sm">
-                11/2025 — 03/2026
-            </div>
-        </div>
-    </div>
-    <div class="bg-white p-8 rounded-[30px] shadow-sm border-2 border-ocre-suave/20 flex flex-col md:flex-row justify-between gap-4 mt-8">
-    <div>
-        <span class="text-vermelho-terra font-bold text-xs uppercase tracking-widest">Educação Complementar</span>
-        <h4 class="text-2xl font-bold text-verde-musgo mt-1">Cursos de Especialização</h4>
-        <ul class="text-gray-600 text-sm mt-2 list-disc list-inside">
-            <li>Fundamentos do Design Gráfico — Fundação Bradesco</li>
-            <li>Fotografia com Celular — Senac SP</li>
-        </ul>
-    </div>
-    <div class="md:text-right text-gray-500 font-bold text-sm">
-        2025 — 2026
-    </div>
-</div>
-</section>
-
-
-        <section id="habilidades" class="mb-32">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        
         <div class="bg-white p-10 rounded-[40px] border-2 border-verde-musgo shadow-sm">
             <h4 class="text-2xl font-bold mb-8 flex items-center gap-3">
-                <i class="fa-solid fa-palette text-vermelho-terra"></i> Ferramentas & Técnica
+                <i class="fa-solid fa-laptop-code text-vermelho-terra"></i> Hard Skills (Técnicas)
             </h4>
             <div class="flex flex-wrap gap-3">
-                <span class="bg-verde-musgo/5 border border-verde-musgo/10 px-4 py-2 rounded-xl text-sm font-bold text-verde-musgo">Canva Pro (Design Avançado)</span>
-                <span class="bg-verde-musgo/5 border border-verde-musgo/10 px-4 py-2 rounded-xl text-sm font-bold text-verde-musgo">CapCut (Edição de Vídeo Mobile)</span>
-                <span class="bg-verde-musgo/5 border border-verde-musgo/10 px-4 py-2 rounded-xl text-sm font-bold text-verde-musgo">Data Viz (Gráficos de Pesquisa)</span>
-                <span class="bg-verde-musgo/5 border border-verde-musgo/10 px-4 py-2 rounded-xl text-sm font-bold text-verde-musgo">Google Forms & Análise Qualitativa</span>
-                <span class="bg-verde-musgo/5 border border-verde-musgo/10 px-4 py-2 rounded-xl text-sm font-bold text-verde-musgo">Pacote Office (PPT Criativo)</span>
-                <span class="bg-verde-musgo/5 border border-verde-musgo/10 px-4 py-2 rounded-xl text-sm font-bold text-verde-musgo">Fotografia Digital & Edição</span>
+                <span class="bg-verde-musgo/5 border border-verde-musgo/10 px-4 py-2 rounded-xl text-sm font-bold text-verde-musgo">Design de Branding & Identidade Visual</span>
+                <span class="bg-verde-musgo/5 border border-verde-musgo/10 px-4 py-2 rounded-xl text-sm font-bold text-verde-musgo">Canva Pro Avançado (Brand Kits & Templates)</span>
+                <span class="bg-verde-musgo/5 border border-verde-musgo/10 px-4 py-2 rounded-xl text-sm font-bold text-verde-musgo">Teoria das Cores & Tipografia Aplicada</span>
+                <span class="bg-verde-musgo/5 border border-verde-musgo/10 px-4 py-2 rounded-xl text-sm font-bold text-verde-musgo">Diagramação de Materiais Ricos (PDFs/E-books)</span>
+                
+                <span class="bg-vermelho-terra/5 border border-vermelho-terra/10 px-4 py-2 rounded-xl text-sm font-bold text-vermelho-terra">Edição de Vídeo Vertical (CapCut/Reels/TikTok)</span>
+                <span class="bg-vermelho-terra/5 border border-vermelho-terra/10 px-4 py-2 rounded-xl text-sm font-bold text-vermelho-terra">Storytelling & Roteirização Audiovisual</span>
+                <span class="bg-vermelho-terra/5 border border-vermelho-terra/10 px-4 py-2 rounded-xl text-sm font-bold text-vermelho-terra">Social Media Analytics & KPIs</span>
+                <span class="bg-vermelho-terra/5 border border-vermelho-terra/10 px-4 py-2 rounded-xl text-sm font-bold text-vermelho-terra">Criação de Anúncios (Tráfego Pago)</span>
+
+                <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-xl text-sm font-bold text-gray-600">IA Generativa para Conteúdo (ChatGPT, Sora, Midjourney)</span>
+                <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-xl text-sm font-bold text-gray-600">Noções de Figma & Adobe Suite</span>
+                <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-xl text-sm font-bold text-gray-600">Google Workspace & Notion (Organização)</span>
             </div>
-            
         </div>
 
         <div class="bg-white p-10 rounded-[40px] border-2 border-verde-musgo shadow-sm">
             <h4 class="text-2xl font-bold mb-8 flex items-center gap-3">
-                <i class="fa-solid fa-bolt text-vermelho-terra"></i> Soft Skills & Expertise
+                <i class="fa-solid fa-lightbulb text-vermelho-terra"></i> Soft Skills (Comportamentais)
             </h4>
             <div class="flex flex-wrap gap-3">
-                <span class="bg-vermelho-terra/5 border border-vermelho-terra/10 px-4 py-2 rounded-xl text-sm font-bold text-vermelho-terra">Escrita Criativa (Storytelling)</span>
-                <span class="bg-vermelho-terra/5 border border-vermelho-terra/10 px-4 py-2 rounded-xl text-sm font-bold text-vermelho-terra">Visão em ESG & Sustentabilidade</span>
-                <span class="bg-vermelho-terra/5 border border-vermelho-terra/10 px-4 py-2 rounded-xl text-sm font-bold text-vermelho-terra">Branding Pessoal & Identidade</span>
-                <span class="bg-vermelho-terra/5 border border-vermelho-terra/10 px-4 py-2 rounded-xl text-sm font-bold text-vermelho-terra">Resiliência & Gestão de Crise</span>
-                <span class="bg-vermelho-terra/5 border border-vermelho-terra/10 px-4 py-2 rounded-xl text-sm font-bold text-vermelho-terra">Comunicação Assertiva</span>
-                <span class="bg-vermelho-terra/5 border border-vermelho-terra/10 px-4 py-2 rounded-xl text-sm font-bold text-vermelho-terra">Empatia no Atendimento ao Público</span>
+                <span class="bg-ocre-suave/10 border border-ocre-suave/20 px-4 py-2 rounded-xl text-sm font-bold text-ocre-suave">Visão Estratégica de Marca (Branding Mindset)</span>
+                <span class="bg-ocre-suave/10 border border-ocre-suave/20 px-4 py-2 rounded-xl text-sm font-bold text-ocre-suave">Atenção Crítica a Tendências Visuais</span>
+                <span class="bg-ocre-suave/10 border border-ocre-suave/20 px-4 py-2 rounded-xl text-sm font-bold text-ocre-suave">Adaptabilidade para Marcas Pessoais e Startups</span>
+                <span class="bg-ocre-suave/10 border border-ocre-suave/20 px-4 py-2 rounded-xl text-sm font-bold text-ocre-suave">Comunicação Assertiva com Clientes</span>
+                <span class="bg-ocre-suave/10 border border-ocre-suave/20 px-4 py-2 rounded-xl text-sm font-bold text-ocre-suave">Proatividade em Workflows AI-First</span>
+                <span class="bg-ocre-suave/10 border border-ocre-suave/20 px-4 py-2 rounded-xl text-sm font-bold text-ocre-suave">Colaboração em Equipes Remotas</span>
+                <span class="bg-ocre-suave/10 border border-ocre-suave/20 px-4 py-2 rounded-xl text-sm font-bold text-ocre-suave">Foco em Resultados e Performance</span>
             </div>
         </div>
+
         <div class="bg-white p-10 rounded-[40px] border-2 border-verde-musgo shadow-sm md:col-span-2">
-    <h4 class="text-2xl font-bold mb-8 flex items-center gap-3">
-        <i class="fa-solid fa-language text-vermelho-terra"></i> Comunicação & Idiomas
-    </h4>
-    <div class="flex flex-wrap gap-6">
-        <div class="flex items-center gap-2">
-            <span class="font-bold text-verde-musgo">Inglês:</span>
-            <span class="text-gray-600 text-sm">Intermediário</span>
+            <h4 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                <i class="fa-solid fa-language text-vermelho-terra"></i> Idiomas & Comunicação Editorial
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex flex-col gap-1">
+                    <span class="font-bold text-verde-musgo">Inglês Intermediário</span> 
+                    <span class="text-gray-600 text-sm">Leitura de referências globais, copywriting básico e acompanhamento de trends internacionais.</span>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <span class="font-bold text-verde-musgo">Espanhol Básico</span> 
+                    <span class="text-gray-600 text-sm">Compreensão de textos e vocabulário fundamental para comunicação.</span>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <span class="font-bold text-verde-musgo">Copywriting & Redação</span> 
+                    <span class="text-gray-600 text-sm">Criação de legendas magnéticas, ganchos (hooks) para vídeos e CTAs focados em conversão.</span>
+                </div>
+            </div>
         </div>
-        <div class="flex items-center gap-2">
-            <span class="font-bold text-verde-musgo">Espanhol:</span>
-            <span class="text-gray-600 text-sm">Básico</span>
-        </div>
-        <div class="flex items-center gap-2">
-            <span class="font-bold text-verde-musgo">Escrita:</span>
-            <span class="text-gray-600 text-sm">Redação Criativa & Gramática</span>
-        </div>
-    </div>
-</div>
     </div>
 </section>
 
@@ -308,7 +290,7 @@
                 </div>
 
                 <div class="social-footer-links">
-                    <a href="https://linkedin.com/in/letícia-soares-dos-santos-5b6b063a9/" target="_blank" class="mx-4 hover:text-vermelho-terra transition-colors">Linkedin</a>
+                    <a href="https://linkedin.com/in/letícia-soares-dos-santos-5b6b063a9/" target="_blank" class="mx-4 hover:text-vermelho-terra transition-colors underline underline-offset-8">Linkedin</a>
                 </div>
 
                 <p class="mt-16 text-[10px] opacity-30 italic">© 2026 Letícia Soares • Design com Propósito</p>
