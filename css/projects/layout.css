@@ -1,20 +1,46 @@
 /* --- Link Voltar (Topo) --- Layout.css */
-.back-link {
-    display: inline-block;
-    margin: 20px 0 0 20px;
-    text-decoration: none;
-    color: #4A5D4E;
-    font-weight: 700;
-    font-family: 'Nunito', sans-serif;
+/* --- Botão Voltar (Estilização Corrigida) --- */
+.project-nav {
+    padding: 20px;
     position: absolute;
-    top: 10px;
-    left: 20px;
-    z-index: 10;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
-.back-link:hover {
-    text-decoration: underline;
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #4A5D4E; /* Verde musgo do seu tema */
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px 18px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(74, 93, 78, 0.1);
+    transition: all 0.3s ease;
 }
+
+.btn-back i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-back:hover {
+    background: #4A5D4E;
+    color: white;
+    box-shadow: 0 5px 15px rgba(74, 93, 78, 0.2);
+}
+
+.btn-back:hover i {
+    transform: translateX(-5px);
+}
+
+
 
 /* --- Ajuste Global de Layout --- */
 .container {
@@ -78,4 +104,12 @@
 @media (max-width: 992px) {
     .main-project-grid { flex-direction: column; }
     .sticky-content { position: static; }
+}
+/* Ajuste para mobile */
+@media (max-width: 768px) {
+    .project-nav {
+        position: relative;
+        padding: 15px 20px 0;
+        background: #fdfaf5; /* Fundo creme para não sumir */
+    }
 }

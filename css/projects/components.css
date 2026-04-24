@@ -208,3 +208,41 @@
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+/* --- Ajuste Geral de Imagens do Projeto --- */
+.slide-img, 
+.main-banner-img, 
+.galeria-item img { /* Adicione a classe da sua galeria aqui */
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Força a proporção de cinema */
+    object-fit: cover;    /* Corta as bordas sem esticar a imagem */
+    border-radius: 30px;
+    display: block;
+}
+
+/* Fix para o container do Slider não achatar */
+.slider-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    position: relative;
+    border-radius: 40px;
+}
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 200px; /* Altura fixa para alinhar tudo */
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.02);
+}
