@@ -75,8 +75,7 @@ const projetos = {
             "img/taba/taba6.jpeg",
             "img/taba/taba7.jpeg",
             "img/taba/taba8.jpeg",
-            "img/taba/taba9.jpeg",
-            "img/taba/taba10.jpeg"
+            "img/taba/taba9.jpeg"
         ],
         corDestaque: "#1DB954"
     },
