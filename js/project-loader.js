@@ -101,14 +101,26 @@ container.innerHTML = `
 `;
     }
 }
-
-// Controle do Carrossel
+// No topo do arquivo, fora de qualquer função
 let currentSlide = 0;
+
 function moveSlider(direction) {
     const wrapper = document.querySelector('.slider-wrapper');
     const slides = document.querySelectorAll('.slide-img');
-    if(!wrapper || slides.length === 0) return;
+    
+    if (!wrapper || slides.length === 0) return;
 
-    currentSlide = (currentSlide + direction + slides.length) % slides.length;
-    wrapper.style.transform = `translateX(${-currentSlide * 100}%)`;
+    // Atualiza o índice
+    currentSlide += direction;
+
+    // Loop infinito (se chegar no fim, volta pro começo)
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    } else if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+    }
+
+    // Move o wrapper
+    const offset = -currentSlide * 100;
+    wrapper.style.transform = `translateX(${offset}%)`;
 }

@@ -116,4 +116,60 @@
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}/* --- FIX DO SLIDER (CARROSSEL) --- */
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Esconde as imagens que estão fora da vista */
+    border-radius: 40px;
+    background: #000;
+    aspect-ratio: 16 / 9; /* Mantém a proporção de slide */
+}
+
+.slider-wrapper {
+    display: flex; /* Alinha as imagens lado a lado */
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-img {
+    min-width: 100%; /* Cada imagem ocupa 100% da largura do container */
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Não corta o slide acadêmico */
+    flex-shrink: 0; /* Impede que a imagem esmague */
+}
+
+/* Botões sobre o slide */
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    pointer-events: none; /* Deixa clicar na imagem se precisar */
+    z-index: 10;
+}
+
+.slider-btn {
+    pointer-events: auto; /* Reativa o clique nos botões */
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #4A5D4E;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.slider-btn:hover {
+    background: #b85c38;
+    color: white;
+    transform: scale(1.1);
 }
