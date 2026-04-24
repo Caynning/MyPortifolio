@@ -44,17 +44,18 @@ if (data.tipo === 'video') {
             ? `<div class="target-box-mini"><h4>Público-Alvo</h4><p>${data.analise.publico}</p></div>` 
             : '';
 
-        container.innerHTML = `
-            <section class="project-hero" style="border-bottom: 4px solid ${data.corDestaque}">
-                <div class="container">
-                    <span class="badge" style="background: ${data.corDestaque}; color: white;">${data.categoria}</span>
-                    <h1>${data.titulo}</h1>
-                    <p class="subtitle">${data.cliente}</p>
-                </div>
-            </section>
+// Dentro do container.innerHTML no project-loader.js
+container.innerHTML = `
+    <header class="project-header-info">
+        <span class="badge-cat" style="background: ${data.corDestaque}20; color: ${data.corDestaque}">
+            ${data.categoria}
+        </span>
+        <h1 class="title-display">${data.titulo}</h1>
+        <div class="header-line" style="background: ${data.corDestaque}"></div>
+    </header>
 
-            <section class="container">
-                <div class="main-project-grid">
+    <div class="main-project-grid">
+        
                     <div class="creative-side">
                         <div class="sticky-content">
                             ${visualContent}

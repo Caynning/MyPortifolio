@@ -1,5 +1,5 @@
 /* 1. Reset e Base da Página */
-.project-page {
+/*.project-page {
     background: #F4F1EA;
     padding-bottom: 100px;
     margin: 0;
@@ -8,7 +8,7 @@
     font-family: 'Inter', sans-serif; /* Ou a fonte principal que você usa */
 }
 
-/* Garante que o conteúdo não herde margens estranhas do index */
+/* Garante que o conteúdo não herde margens estranhas do index 
 .project-page main {
     margin-left: 0 !important;
     padding: 0 !important;
@@ -20,10 +20,10 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 25px;
-    box-sizing: border-box; /* Importante para o padding não somar na largura */
+    box-sizing: border-box; /* Importante para o padding não somar na largura 
 }
 
-/* 2. Navegação Superior */
+/* 2. Navegação Superior 
 .project-nav {
     width: 100%;
     padding: 20px 5%;
@@ -38,7 +38,7 @@
 
 .btn-back {
     text-decoration: none;
-    color: #4A5D4E; /* Cor do seu projeto */
+    color: #4A5D4E; /* Cor do seu projeto 
     font-weight: 700;
     font-size: 0.9rem;
     display: flex;
@@ -52,7 +52,7 @@
     transform: translateX(-5px); 
 }
 
-/* 3. Hero Area */
+/* 3. Hero Area 
 .project-hero {
     width: 100%;
     padding: 80px 0 60px;
@@ -85,20 +85,20 @@
     font-weight: 400;
 }
 
-/* 4. Layout Principal (Grid) */
+/* 4. Layout Principal (Grid) 
 .creative-side, .strategy-side {
     min-width: 0; 
 }
 .main-project-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); /* O minmax(0, ...) impede que a coluna expanda além do pai */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); /* O minmax(0, ...) impede que a coluna expanda além do pai 
     gap: 40px;
     margin-top: 60px;
     align-items: start;
-    width: 100%; /* Garante que ocupe apenas 100% do container */
+    width: 100%; /* Garante que ocupe apenas 100% do container 
 }
 
-/* Lado Esquerdo: Peça Criativa */
+/* Lado Esquerdo: Peça Criativa 
 .sticky-content {
     position: sticky;
     top: 120px;
@@ -114,7 +114,7 @@
 }
 
 .main-banner-img {
-    max-width: 100%; /* Nunca maior que a coluna */
+    max-width: 100%; /* Nunca maior que a coluna 
     height: auto;
     display: block;
     border-radius: 20px;
@@ -130,11 +130,11 @@
 }
 
 .target-box-mini h4 {
-    color: #EAD8B1; /* Cor de destaque para o título */
+    color: #EAD8B1; /* Cor de destaque para o título 
     margin-bottom: 10px;
 }
 
-/* 5. Lado Direito: Estratégia */
+/* 5. Lado Direito: Estratégia 
 .content-block {
     margin-bottom: 50px;
 }
@@ -148,10 +148,10 @@
     gap: 10px;
 }
 
-/* --- AJUSTE DA MATRIZ SWOT --- */
+/* --- AJUSTE DA MATRIZ SWOT --- 
 .swot-list {
     display: grid;
-    /* Usar minmax evita que o card fique minúsculo antes do breakpoint */
+    /* Usar minmax evita que o card fique minúsculo antes do breakpoint 
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
     gap: 15px;
 }
@@ -164,7 +164,7 @@
     font-size: 0.95rem;
     box-shadow: 0 5px 15px rgba(0,0,0,0.03);
     line-height: 1.6;
-    /* Garante que o texto longo quebre a linha em vez de empurrar o card */
+    /* Garante que o texto longo quebre a linha em vez de empurrar o card 
     word-wrap: break-word; 
 }
 
@@ -174,7 +174,7 @@
     margin-bottom: 5px;
 }
 
-/* Lista de Entregas Técnicas */
+/* Lista de Entregas Técnicas 
 .check-list {
     list-style: none;
     padding: 0;
@@ -198,7 +198,7 @@
     font-weight: 900;
 }
 
-/* 6. Galeria de Imagens Adicionais */
+/* 6. Galeria de Imagens Adicionais 
 .process-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -208,7 +208,7 @@
 .img-processo {
     width: 100%;
     height: 250px;
-    object-fit: cover; /* Mantém a proporção sem deformar */
+    object-fit: cover; /* Mantém a proporção sem deformar 
     border-radius: 15px;
     transition: 0.3s;
     border: 1px solid rgba(0,0,0,0.05);
@@ -218,7 +218,7 @@
     transform: scale(1.02);
 }
 
-/* 7. Responsividade */
+/* 7. Responsividade 
 @media (max-width: 992px) {
     .main-project-grid {
         grid-template-columns: 1fr;
@@ -246,28 +246,28 @@
 
 @media (max-width: 992px) {
     .main-project-grid {
-        grid-template-columns: 1fr; /* Vira uma coluna só */
+        grid-template-columns: 1fr; /* Vira uma coluna só 
     }
 
     .sticky-content {
-        position: relative; /* Para de flutuar para não cobrir o resto */
+        position: relative; /* Para de flutuar para não cobrir o resto 
         top: 0;
     }
 
     .project-page main {
-        padding: 0 15px !important; /* Espaçamento nas bordas do celular */
+        padding: 0 15px !important; /* Espaçamento nas bordas do celular 
     }
 }
-/* --- AJUSTE DO SLIDER (CARROSSEL) --- */
+/* --- AJUSTE DO SLIDER (CARROSSEL) --- 
 .slider-container {
     position: relative;
     width: 100%;
     max-width: 100%;
-    aspect-ratio: 16 / 9; /* Mantém a proporção de slide padrão */
-    overflow: hidden; /* Corta o que sobrar */
+    aspect-ratio: 16 / 9; /* Mantém a proporção de slide padrão 
+    overflow: hidden; /* Corta o que sobrar 
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    background: #000; /* Fundo preto para imagens que não preencherem tudo */
+    background: #000; /* Fundo preto para imagens que não preencherem tudo 
 }
 
 .slider-wrapper {
@@ -277,14 +277,14 @@
 }
 
 .slide-img {
-    min-width: 100%; /* Cada imagem ocupa exatamente a largura do container */
+    min-width: 100%; /* Cada imagem ocupa exatamente a largura do container 
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Ajusta a imagem dentro do espaço sem cortar, ideal para slides */
+    object-fit: contain; /* Ajusta a imagem dentro do espaço sem cortar, ideal para slides 
     display: block;
 }
 
-/* Controles do Slider */
+/* Controles do Slider 
 .slider-controls {
     position: absolute;
     top: 50%;
@@ -292,13 +292,13 @@
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
-    pointer-events: none; /* Garante que o container não bloqueie cliques */
+    pointer-events: none; /* Garante que o container não bloqueie cliques 
     padding: 0 10px;
     box-sizing: border-box;
 }
 
 .slider-btn {
-    pointer-events: auto; /* Reativa o clique nos botões */
+    pointer-events: auto; /* Reativa o clique nos botões 
     background: rgba(255, 255, 255, 0.8);
     border: none;
     width: 40px;
@@ -317,10 +317,10 @@
     background: white;
     transform: scale(1.1);
 }
-/* Container para vídeos verticais (9:16) */
+/* Container para vídeos verticais (9:16) 
 .video-container-vertical {
     width: 100%;
-    max-width: 320px; /* Largura aproximada de um celular no desktop */
+    max-width: 320px; /* Largura aproximada de um celular no desktop 
     margin: 0 auto;
     border-radius: 20px;
     overflow: hidden;
@@ -340,3 +340,70 @@
         max-width: 280px;
     }
 }
+
+/* Fundo e Decoração 
+.project-page {
+    background-color: #fdfaf5; /* Um creme bem clarinho para não ser branco puro 
+    background-image: url('img/texture-grain.png'); /* Se tiver uma textura de papel/grão 
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Elementos Flutuantes 
+.decor-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Para não atrapalhar o clique 
+    z-index: 0;
+}
+
+.floating-item {
+    position: absolute;
+    font-size: 5rem;
+    opacity: 0.1;
+    filter: grayscale(0.5);
+}
+
+.item-1 { top: 10%; left: -2%; transform: rotate(-15deg); }
+.item-2 { bottom: 5%; right: 2%; font-size: 3rem; }
+.item-3 { top: 40%; right: -3%; opacity: 0.05; }
+
+/* Ajuste no Container do Projeto 
+#project-content {
+    position: relative;
+    z-index: 1; /* Fica acima dos cogumelos 
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Molduras Orgânicas para as imagens/vídeos 
+.main-banner-img, .video-container-vertical, .slider-container {
+    border-radius: 40px !important; /* Bordas bem arredondadas como na index 
+    border: 8px solid white;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.08);
+}
+
+/* Estilo do Botão Voltar 
+.btn-back {
+    font-family: 'Gaegu', cursive;
+    font-size: 1.2rem;
+    color: #4a5d4e; /* Verde musgo 
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 20px;
+}
+
+.btn-back:hover {
+    transform: translateX(-5px);
+    background: #b85c38; /* Vermelho terra 
+    color: white;
+}*/

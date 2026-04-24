@@ -1,0 +1,69 @@
+/* --- Hero Area (Cabeçalho do Projeto) --- */
+.project-hero {
+    width: 100%;
+    padding: 80px 0 60px;
+    text-align: center;
+    background: white;
+    border-radius: 0 0 50px 50px; /* Curva suave no fundo */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    margin-bottom: 40px;
+}
+
+.project-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-family: 'Gaegu', cursive; /* Mantendo o estilo lúdico */
+    color: #4A5D4E;
+    margin: 15px auto;
+    max-width: 900px;
+    line-height: 1.1;
+}
+
+.badge {
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: inline-block;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: #888;
+    font-weight: 400;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* --- Grid Principal --- */
+.main-project-grid {
+    display: grid;
+    /* Coluna da esquerda (visual) um pouco menor que a da direita (estratégia) */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 60px;
+    align-items: start;
+    margin-top: 40px;
+}
+
+/* Efeito Sticky (Seguir a rolagem) no lado visual */
+.creative-side {
+    position: sticky;
+    top: 120px;
+}
+
+/* Ajustes para Mobile (Ecrãs pequenos) */
+@media (max-width: 992px) {
+    .main-project-grid {
+        grid-template-columns: 1fr; /* Empilha as colunas */
+        gap: 40px;
+    }
+
+    .creative-side {
+        position: relative;
+        top: 0;
+    }
+
+    .project-hero {
+        padding: 60px 20px;
+    }
+}
