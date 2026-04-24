@@ -1,5 +1,5 @@
 /* ============================================================
-   COMPONENTES - PORTFÓLIO 2026 (REVISADO)
+   COMPONENTES - PORTFÓLIO 2026 REVISADO
    ============================================================ */
 
 /* --- Badges e Rótulos --- */
@@ -16,7 +16,7 @@
 .label-view {
     font-family: 'Gaegu', cursive;
     font-size: 1.2rem;
-    color: #b85c38; /* Vermelho Terra */
+    color: #b85c38;
     margin-bottom: 12px;
     display: block;
     letter-spacing: 1px;
@@ -31,7 +31,7 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.02);
     animation: fadeInUp 0.8s ease forwards;
     box-sizing: border-box;
-    overflow: hidden; /* Evita que imagens vazem o card */
+    overflow: hidden; /* Garante que nada saia do card */
 }
 
 .mini-card, .target-box-mini {
@@ -43,25 +43,8 @@
     box-shadow: 0 10px 25px rgba(0,0,0,0.03);
 }
 
-.mini-card h4, .target-box-mini h4 {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 800;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
-
-.mini-card p, .target-box-mini p {
-    font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #444;
-}
-
 .strategy-card {
     border-left: 8px solid #D9B48F;
-    background: #fff;
 }
 
 /* --- Títulos das Seções --- */
@@ -106,38 +89,15 @@
     font-size: 1.2rem;
 }
 
-/* --- Galeria do Processo (O CORAÇÃO DO BUG) --- */
-.galeria-grid {
-    display: grid;
-    /* Tenta colocar 2 colunas, se não couber (mobile), coloca 1 */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-}
+/* --- Mídia (Imagens, Sliders e Vídeos) --- */
 
-.galeria-grid img {
+.slide-img, 
+.main-banner-img {
     width: 100%;
-    height: 300px; /* Altura fixa para manter o grid alinhado */
-    object-fit: cover; /* Não distorce a imagem */
-    border-radius: 20px;
-    background: #eee;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    cursor: zoom-in;
+    aspect-ratio: 16 / 9; 
+    object-fit: cover;
+    border-radius: 30px;
     display: block;
-}
-
-.galeria-grid img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-/* --- Mídia Principal (Slide e Banners) --- */
-.slide-img, .main-banner-img {
-    width: 100%;
-    max-height: 500px; /* Impede que banners gigantes matem o scroll */
-    object-fit: contain; /* Mostra a arte inteira sem cortes */
-    background: #f9f9f9;
-    border-radius: 25px;
 }
 
 /* Slider / Carrossel */
@@ -154,19 +114,9 @@
 
 .slider-wrapper {
     display: flex;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.slider-controls {
-    position: absolute;
-    top: 50%;
     width: 100%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    padding: 0 15px;
-    pointer-events: none;
-    z-index: 10;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .slider-btn {
@@ -180,16 +130,40 @@
     font-size: 1.2rem;
     color: #4A5D4E;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+/* --- GALERIA DO PROCESSO CORRIGIDA --- */
+.galeria-grid {
+    display: grid;
+    /* Tenta colocar 2 colunas, se não couber (menos de 200px), joga pra baixo */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 200px; /* Altura fixa para manter o grid alinhado */
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.03);
 }
 
 /* Vídeos Verticais */
 .video-container-vertical {
     width: 100%;
-    max-width: 320px;
+    max-width: 280px;
     margin: 0 auto;
-    border-radius: 35px;
-    border: 8px solid white;
+    border-radius: 30px;
+    border: 6px solid white;
     box-shadow: 0 15px 45px rgba(0,0,0,0.08);
+    background: #000;
     overflow: hidden;
 }
 
