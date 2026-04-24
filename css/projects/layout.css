@@ -116,3 +116,44 @@
     content: '✦';
     color: #b85c38;
 }
+/* --- Ajustes de Imagens e Vídeos --- */
+.main-banner-img, 
+.slider-container {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+    border: 8px solid white;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.08);
+}
+
+/* FIX: O vídeo vertical não pode ser 100% da largura da coluna, senão ele fica enorme */
+.video-container-vertical {
+    width: 100%;
+    max-width: 300px; /* Tamanho ideal para simular um celular */
+    margin: 0 auto;   /* Centraliza na coluna dele */
+    border-radius: 40px;
+    border: 8px solid white;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.08);
+    background: #000;
+    overflow: hidden;
+}
+
+.main-video-vertical {
+    width: 100%;
+    display: block;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+}
+
+/* --- FIX DO FOOTER --- */
+.project-footer {
+    width: 100%;
+    padding: 60px 0;
+    text-align: center;
+    background: #4A5D4E; /* Verde Musgo para combinar com a index */
+    color: white;
+    margin-top: 100px; /* Garante que ele saia de baixo da grid */
+    position: relative;
+    z-index: 10;
+    clear: both; /* Limpa qualquer flutuação */
+}
