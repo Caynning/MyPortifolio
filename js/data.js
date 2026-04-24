@@ -22,7 +22,7 @@ const projetos = {
         ],
         bannerPrincipal: "img/BannerCoke.png",
         imagens: ["img/IMGCoke.jpeg", "img/img3Coke.jpeg"], 
-        corDestaque: "#4A5D4E" 
+        corDestaque: "#4A5D4E"
     },
 
     'fotografia': {
@@ -161,7 +161,7 @@ const projetos = {
         categoria: "Audiovisual",
         tipo: "video", // Importante ser 'video'
         videoUrl: "videos/batata-promo.mp4", // O caminho do seu arquivo
-        corDestaque: "#E63946", // Um vermelho batata frita
+        corDestaque: "#A67B5B", // Um vermelho batata frita
         papel: "Direção Criativa, Roteiro e Edição",
         descricao: "Criação de um vídeo curto promocional focado em Marketing de Desejo (Appetite Appeal) através de cortes rápidos...",
 estrategiaVisual: "Utilizei cores quentes (vermelho e amarelo) para estimular o apetite e apliquei técnicas de edição do CapCut para sincronizar as batidas da música com o surgimento do produto.",

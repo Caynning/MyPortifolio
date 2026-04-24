@@ -1,159 +1,81 @@
-/* --- Hero Area (Cabeçalho do Projeto) --- */
+/* --- Link Voltar (Topo) --- Layout.css */
+.back-link {
+    display: inline-block;
+    margin: 20px 0 0 20px;
+    text-decoration: none;
+    color: #4A5D4E;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 10;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Ajuste Global de Layout --- */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* --- Hero Area --- */
 .project-hero {
     width: 100%;
-    padding: 80px 0 60px;
+    padding: 100px 0 80px;
     text-align: center;
     background: white;
     border-radius: 0 0 50px 50px; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     position: relative;
     z-index: 2;
 }
 
-.project-hero h1 {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    font-family: 'Gaegu', cursive;
-    color: #4A5D4E;
-    margin: 15px auto;
-    max-width: 900px;
-    line-height: 1.1;
-}
-
-.badge {
-    padding: 8px 24px;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    display: inline-block;
-}
-
-/* --- Estrutura da Grid (Onde a mágica acontece) --- */
+/* --- Grid Principal --- */
 .main-project-grid {
-    display: flex; /* Mudamos para Flex para melhor controle de alinhamento */
+    display: flex;
     flex-wrap: wrap; 
-    gap: 60px;
-    margin-top: 40px;
+    gap: 40px;
+    margin-top: 20px;
     align-items: flex-start;
 }
 
-/* Coluna da Esquerda: O Visual */
 .creative-side {
-    flex: 1; /* Ocupa espaço proporcional */
-    min-width: 350px; /* Não deixa ficar pequeno demais */
-    position: sticky;
-    top: 120px;
-}
-
-/* Coluna da Direita: O Texto/Estratégia */
-.strategy-side {
-    flex: 1.2;
+    flex: 1;
     min-width: 350px;
 }
 
-/* --- Ajustes de Imagens e Vídeos --- */
-.main-banner-img, 
-.video-container-vertical, 
-.slider-container {
-    width: 100%;
-    height: auto;
-    border-radius: 40px;
-    border: 8px solid white;
-    box-shadow: 0 15px 45px rgba(0,0,0,0.08);
-    display: block;
+.sticky-content {
+    position: sticky;
+    top: 40px;
 }
 
-/* --- Responsividade (Para não quebrar no celular) --- */
-@media (max-width: 992px) {
-    .main-project-grid {
-        flex-direction: column; /* Empilha um embaixo do outro */
-        gap: 40px;
-    }
-
-    .creative-side, .strategy-side {
-        width: 100%;
-        min-width: 100%;
-        position: relative; /* Desativa o sticky no mobile */
-        top: 0;
-    }
-
-    .project-hero h1 {
-        font-size: 2.2rem;
-    }
-}
-/* Corrigindo o espaçamento dos blocos de conteúdo */
-.content-block {
-    background: white;
-    padding: 30px;
-    border-radius: 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+.strategy-side {
+    flex: 1.5;
+    min-width: 350px;
 }
 
-.mini-card {
-    margin-top: 20px;
-}
-
-.strategy-side h3 {
-    font-family: 'Gaegu', cursive;
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #4A5D4E;
-}
-
-/* Lista de check bonitinha */
-.check-list li {
-    list-style: none;
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.check-list li::before {
-    content: '✦';
-    color: #b85c38;
-}
-/* --- Ajustes de Imagens e Vídeos --- */
-.main-banner-img, 
-.slider-container {
-    width: 100%;
-    height: auto;
-    border-radius: 40px;
-    border: 8px solid white;
-    box-shadow: 0 15px 45px rgba(0,0,0,0.08);
-}
-
-/* FIX: O vídeo vertical não pode ser 100% da largura da coluna, senão ele fica enorme */
-.video-container-vertical {
-    width: 100%;
-    max-width: 300px; /* Tamanho ideal para simular um celular */
-    margin: 0 auto;   /* Centraliza na coluna dele */
-    border-radius: 40px;
-    border: 8px solid white;
-    box-shadow: 0 15px 45px rgba(0,0,0,0.08);
-    background: #000;
-    overflow: hidden;
-}
-
-.main-video-vertical {
-    width: 100%;
-    display: block;
-    aspect-ratio: 9 / 16;
-    object-fit: cover;
-}
-
-/* --- FIX DO FOOTER --- */
+/* --- Rodapé (Footer) --- */
 .project-footer {
     width: 100%;
     padding: 60px 0;
     text-align: center;
-    background: #4A5D4E; /* Verde Musgo para combinar com a index */
+    background: #4A5D4E;
     color: white;
-    margin-top: 100px; /* Garante que ele saia de baixo da grid */
+    margin-top: 100px;
+    clear: both; /* Garante que saia debaixo do grid */
     position: relative;
-    z-index: 10;
-    clear: both; /* Limpa qualquer flutuação */
+    z-index: 5;
+}
+
+@media (max-width: 992px) {
+    .main-project-grid { flex-direction: column; }
+    .sticky-content { position: static; }
 }
