@@ -105,13 +105,7 @@
     max-height: 500px;
 }
 
-/* Imagens do Banner Principal e Slides */
-.main-banner-img, .slide-img {
-    width: 100%;
-    border-radius: 30px;
-    display: block;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-}
+
 
 /* --- Rodapé --- */
 .project-footer {
@@ -138,3 +132,4 @@
     .btn-back { width: 100%; justify-content: center; }
     .project-hero { padding: 60px 20px; }
 }
+

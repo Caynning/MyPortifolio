@@ -1,5 +1,5 @@
 /* ============================================================
-   PROJECT-LOADER.JS - REVISADO E CORRIGIDO
+   PROJECT-LOADER.JS - VERSÃO CORRIGIDA (DYNAMIC TYPES)
    ============================================================ */
 
 window.onload = function() {
@@ -11,25 +11,26 @@ window.onload = function() {
         document.title = `${data.titulo} | Letícia Soares`;
         const container = document.getElementById('project-content');
 
-        // --- Lógica para o Visual (Slide, Imagem ou Vídeo) ---
         let visualContent = '';
 
+        // 1. LÓGICA DE VÍDEO
         if (data.tipo === 'video') {
             visualContent = `
                 <p class="label-view">Assista ao vídeo abaixo</p>
                 <div class="video-container-vertical">
                     <video controls autoplay muted loop class="main-video-vertical">
                         <source src="${data.videoUrl}" type="video/mp4">
-                        Seu navegador não suporta vídeos.
                     </video>
                 </div>
             `;
-        } else if (data.tipo === 'apresentacao') {
+        } 
+        // 2. LÓGICA DE SLIDER (APRESENTAÇÃO)
+        else if (data.tipo === 'apresentacao') {
             visualContent = `
                 <p class="label-view">Deslize para ver os slides</p>
                 <div class="slider-container">
                     <div class="slider-wrapper">
-                        ${data.slides.map(slide => `<img src="${slide}" class="slide-img">`).join('')}
+                        ${data.slides.map(slide => `<img src="${slide}" class="slide-img" onclick="openLightbox(this.src)">`).join('')}
                     </div>
                     <div class="slider-controls">
                         <button class="slider-btn" onclick="moveSlider(-1)">❮</button>
@@ -37,19 +38,25 @@ window.onload = function() {
                     </div>
                 </div>
             `;
-        } else {
+        } 
+        // 3. LÓGICA DE IMAGEM ÚNICA (Diferenciando Vertical de Normal)
+        else {
+            // Se o ID for 'coca-cola' ou 'fotografia', usamos uma classe especial para não cortar
+            const isVertical = id === 'coca-cola' || id === 'fotografia' || id === 'risos';
+            const imgClass = isVertical ? 'main-banner-vertical' : 'main-banner-img';
+            
             visualContent = `
-                <p class="label-view">Peça Final</p>
-                <img src="${data.bannerPrincipal}" alt="Peça Principal" class="main-banner-img">
+                <p class="label-view">Peça Final (Clique para ampliar)</p>
+                <div class="img-reveal-container">
+                    <img src="${data.bannerPrincipal}" alt="Peça Principal" class="${imgClass}" onclick="openLightbox(this.src)">
+                </div>
             `;
         }
 
-        // --- Lógica para o Público-Alvo ---
         const targetBox = (data.analise && data.analise.publico) 
             ? `<div class="target-box-mini"><h4>Público-Alvo</h4><p>${data.analise.publico}</p></div>` 
             : '';
 
-        // --- Montagem do HTML Principal ---
         container.innerHTML = `
             <section class="project-hero">
                 <div class="container">
@@ -66,12 +73,10 @@ window.onload = function() {
                     <div class="creative-side">
                         <div class="sticky-content">
                             ${visualContent}
-                            
                             <div class="content-block mini-card" style="border-left: 5px solid ${data.corDestaque}">
                                 <h4 style="color: ${data.corDestaque}">Minha Atuação</h4>
                                 <p><strong>${data.papel}</strong></p>
                             </div>
-
                             ${targetBox}
                         </div>
                     </div>
@@ -98,41 +103,42 @@ window.onload = function() {
                         <div class="content-block">
                             <h3>Galeria do Processo</h3>
                             <div class="galeria-grid">
-                                ${data.imagens.map(img => `<img src="${img}" alt="Processo Criativo">`).join('')}
+                                ${data.imagens.map(img => `<img src="${img}" alt="Processo" onclick="openLightbox(this.src)">`).join('')}
                             </div>
                         </div>` : ''}
                     </div>
                 </div>
             </section>
         `;
-    } else {
-        // Caso o projeto não exista
-        document.getElementById('project-content').innerHTML = `
-            <div class="loading">
-                <span class="loader-icon">⚠️</span>
-                <p>Projeto não encontrado.</p>
-                <a href="index.html" class="btn-back">Voltar para Home</a>
-            </div>`;
     }
 };
 
-// --- Lógica do Slider (Global) ---
+// --- Funções do Slider Corrigidas ---
 let currentSlide = 0;
-
 function moveSlider(direction) {
     const wrapper = document.querySelector('.slider-wrapper');
     const slides = document.querySelectorAll('.slide-img');
-    
     if (!wrapper || slides.length === 0) return;
 
     currentSlide += direction;
 
-    if (currentSlide >= slides.length) {
-        currentSlide = 0;
-    } else if (currentSlide < 0) {
-        currentSlide = slides.length - 1;
-    }
+    if (currentSlide >= slides.length) currentSlide = 0;
+    else if (currentSlide < 0) currentSlide = slides.length - 1;
 
-    const offset = -currentSlide * 100;
-    wrapper.style.transform = `translateX(${offset}%)`;
+    // Usando clientWidth para garantir que o pulo seja exatamente o tamanho do container
+    const size = wrapper.clientWidth;
+    wrapper.style.transform = `translateX(${-currentSlide * size}px)`;
+}
+
+function openLightbox(src) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    if(lightbox && lightboxImg) {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = src;
+    }
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
 }
