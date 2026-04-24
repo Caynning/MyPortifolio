@@ -44,60 +44,61 @@ if (data.tipo === 'video') {
             ? `<div class="target-box-mini"><h4>Público-Alvo</h4><p>${data.analise.publico}</p></div>` 
             : '';
 
-// Dentro do container.innerHTML no project-loader.js
 container.innerHTML = `
-    <header class="project-header-info">
-        <span class="badge-cat" style="background: ${data.corDestaque}20; color: ${data.corDestaque}">
-            ${data.categoria}
-        </span>
-        <h1 class="title-display">${data.titulo}</h1>
-        <div class="header-line" style="background: ${data.corDestaque}"></div>
-    </header>
+    <section class="project-hero">
+        <div class="container">
+            <span class="badge" style="background: ${data.corDestaque}20; color: ${data.corDestaque}">
+                ${data.categoria}
+            </span>
+            <h1>${data.titulo}</h1>
+            <p class="subtitle">${data.cliente}</p>
+        </div>
+    </section>
 
-    <div class="main-project-grid">
-        
-                    <div class="creative-side">
-                        <div class="sticky-content">
-                            ${visualContent}
-                            
-                            <div class="content-block mini-card">
-                                <h4 style="color: ${data.corDestaque}">Minha Atuação</h4>
-                                <p><strong>${data.papel}</strong></p>
-                            </div>
-
-                            ${targetBox}
-                        </div>
+    <section class="container">
+        <div class="main-project-grid">
+            <div class="creative-side">
+                <div class="sticky-content">
+                    ${visualContent}
+                    
+                    <div class="content-block mini-card" style="border-left: 5px solid ${data.corDestaque}">
+                        <h4 style="color: ${data.corDestaque}">Minha Atuação</h4>
+                        <p><strong>${data.papel}</strong></p>
                     </div>
 
-                    <div class="strategy-side">
-                        <div class="content-block">
-                            <h3>O Desafio</h3>
-                            <p>${data.descricao}</p>
-                        </div>
-
-                        <div class="content-block strategy-card">
-                            <h3>Estratégia e Conceito</h3>
-                            <p>${data.estrategiaVisual}</p>
-                        </div>
-
-                        <div class="content-block">
-                            <h3>Entregáveis</h3>
-                            <ul class="check-list">
-                                ${data.entregáveis.map(item => `<li>${item}</li>`).join('')}
-                            </ul>
-                        </div>
-
-                        ${data.imagens && data.tipo !== 'apresentacao' ? `
-                        <div class="content-block">
-                            <h3>Galeria do Processo</h3>
-                            <div class="process-gallery">
-                                ${data.imagens.map(img => `<img src="${img}" class="img-processo">`).join('')}
-                            </div>
-                        </div>` : ''}
-                    </div>
+                    ${targetBox}
                 </div>
-            </section>
-        `;
+            </div>
+
+            <div class="strategy-side">
+                <div class="content-block">
+                    <h3>O Desafio</h3>
+                    <p>${data.descricao}</p>
+                </div>
+
+                <div class="content-block strategy-card">
+                    <h3>Estratégia e Conceito</h3>
+                    <p>${data.estrategiaVisual}</p>
+                </div>
+
+                <div class="content-block">
+                    <h3>Entregáveis</h3>
+                    <ul class="check-list">
+                        ${data.entregáveis.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+
+                ${data.imagens && data.tipo !== 'apresentacao' ? `
+                <div class="content-block">
+                    <h3>Galeria do Processo</h3>
+                    <div class="process-gallery">
+                        ${data.imagens.map(img => `<img src="${img}" class="img-processo">`).join('')}
+                    </div>
+                </div>` : ''}
+            </div>
+        </div>
+    </section>
+`;
     }
 }
 
