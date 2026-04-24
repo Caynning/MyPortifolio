@@ -20,7 +20,7 @@ const projetos = {
             "Relatório Técnico de Comunicação Integrada",
             "Proposta de melhoria em Logística Reversa"
         ],
-        bannerPrincipal: "img/BannerCoke.jpeg",
+        bannerPrincipal: "img/BannerCoke.png",
         imagens: ["img/IMGCoke.jpeg", "img/img3Coke.jpeg"], 
         corDestaque: "#4A5D4E" 
     },
