@@ -4,14 +4,16 @@
     padding: 80px 0 60px;
     text-align: center;
     background: white;
-    border-radius: 0 0 50px 50px; /* Curva suave no fundo */
+    border-radius: 0 0 50px 50px; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.02);
     margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
 }
 
 .project-hero h1 {
     font-size: clamp(2.5rem, 6vw, 4rem);
-    font-family: 'Gaegu', cursive; /* Mantendo o estilo lúdico */
+    font-family: 'Gaegu', cursive;
     color: #4A5D4E;
     margin: 15px auto;
     max-width: 900px;
@@ -28,42 +30,56 @@
     display: inline-block;
 }
 
-.subtitle {
-    font-size: 1.3rem;
-    color: #888;
-    font-weight: 400;
-    font-family: 'Nunito', sans-serif;
-}
-
-/* --- Grid Principal --- */
+/* --- Estrutura da Grid (Onde a mágica acontece) --- */
 .main-project-grid {
-    display: grid;
-    /* Coluna da esquerda (visual) um pouco menor que a da direita (estratégia) */
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    display: flex; /* Mudamos para Flex para melhor controle de alinhamento */
+    flex-wrap: wrap; 
     gap: 60px;
-    align-items: start;
     margin-top: 40px;
+    align-items: flex-start;
 }
 
-/* Efeito Sticky (Seguir a rolagem) no lado visual */
+/* Coluna da Esquerda: O Visual */
 .creative-side {
+    flex: 1; /* Ocupa espaço proporcional */
+    min-width: 350px; /* Não deixa ficar pequeno demais */
     position: sticky;
     top: 120px;
 }
 
-/* Ajustes para Mobile (Ecrãs pequenos) */
+/* Coluna da Direita: O Texto/Estratégia */
+.strategy-side {
+    flex: 1.2;
+    min-width: 350px;
+}
+
+/* --- Ajustes de Imagens e Vídeos --- */
+.main-banner-img, 
+.video-container-vertical, 
+.slider-container {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+    border: 8px solid white;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.08);
+    display: block;
+}
+
+/* --- Responsividade (Para não quebrar no celular) --- */
 @media (max-width: 992px) {
     .main-project-grid {
-        grid-template-columns: 1fr; /* Empilha as colunas */
+        flex-direction: column; /* Empilha um embaixo do outro */
         gap: 40px;
     }
 
-    .creative-side {
-        position: relative;
+    .creative-side, .strategy-side {
+        width: 100%;
+        min-width: 100%;
+        position: relative; /* Desativa o sticky no mobile */
         top: 0;
     }
 
-    .project-hero {
-        padding: 60px 20px;
+    .project-hero h1 {
+        font-size: 2.2rem;
     }
 }
