@@ -1,11 +1,23 @@
-/* --- Link Voltar (Topo) --- Layout.css */
-/* --- Botão Voltar (Estilização Corrigida) --- */
+/* ============================================================
+   LAYOUT - ESTRUTURA E POSICIONAMENTO
+   ============================================================ */
+
+/* --- Container Principal --- */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+    box-sizing: border-box;
+}
+
+/* --- Navegação (Botão Voltar) --- */
 .project-nav {
-    padding: 20px;
+    padding: 30px 25px;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .btn-back {
@@ -13,48 +25,26 @@
     align-items: center;
     gap: 8px;
     text-decoration: none;
-    color: #4A5D4E; /* Verde musgo do seu tema */
+    color: #4A5D4E;
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
-    font-size: 0.95rem;
-    background: rgba(255, 255, 255, 0.7);
-    padding: 10px 18px;
+    background: white;
+    padding: 12px 20px;
     border-radius: 50px;
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(74, 93, 78, 0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
 }
 
-.btn-back i {
-    font-size: 0.8rem;
-    transition: transform 0.3s ease;
-}
-
 .btn-back:hover {
-    background: #4A5D4E;
-    color: white;
-    box-shadow: 0 5px 15px rgba(74, 93, 78, 0.2);
-}
-
-.btn-back:hover i {
     transform: translateX(-5px);
-}
-
-
-
-/* --- Ajuste Global de Layout --- */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
+    background: #4A5D4E;
+    color: white !important;
 }
 
 /* --- Hero Area --- */
 .project-hero {
     width: 100%;
-    padding: 100px 0 80px;
+    padding: 140px 20px 80px; 
     text-align: center;
     background: white;
     border-radius: 0 0 50px 50px; 
@@ -68,48 +58,83 @@
 .main-project-grid {
     display: flex;
     flex-wrap: wrap; 
-    gap: 40px;
+    gap: 50px;
     margin-top: 20px;
     align-items: flex-start;
 }
 
 .creative-side {
+    flex: 1.2;
+    min-width: 350px;
+}
+
+.strategy-side {
     flex: 1;
     min-width: 350px;
 }
 
 .sticky-content {
     position: sticky;
-    top: 40px;
+    top: 30px;
 }
 
-.strategy-side {
-    flex: 1.5;
-    min-width: 350px;
+/* --- Galeria do Processo (Onde o bicho pegava) --- */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
 }
 
-/* --- Rodapé (Footer) --- */
+.galeria-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Faz as fotos da fotografia ficarem do mesmo tamanho */
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* Ajuste para imagens únicas grandes na galeria */
+.galeria-grid img:only-child {
+    height: auto;
+    max-height: 500px;
+}
+
+/* Imagens do Banner Principal e Slides */
+.main-banner-img, .slide-img {
+    width: 100%;
+    border-radius: 30px;
+    display: block;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+/* --- Rodapé --- */
 .project-footer {
     width: 100%;
-    padding: 60px 0;
+    padding: 60px 20px;
     text-align: center;
     background: #4A5D4E;
     color: white;
     margin-top: 100px;
-    clear: both; /* Garante que saia debaixo do grid */
-    position: relative;
-    z-index: 5;
 }
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
 
 @media (max-width: 992px) {
     .main-project-grid { flex-direction: column; }
     .sticky-content { position: static; }
+    .creative-side, .strategy-side { width: 100%; min-width: 100%; }
 }
-/* Ajuste para mobile */
+
 @media (max-width: 768px) {
-    .project-nav {
-        position: relative;
-        padding: 15px 20px 0;
-        background: #fdfaf5; /* Fundo creme para não sumir */
-    }
+    .project-nav { position: relative; padding: 20px; text-align: center; }
+    .btn-back { width: 100%; justify-content: center; }
+    .project-hero { padding: 60px 20px; }
 }
