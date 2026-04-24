@@ -100,13 +100,13 @@
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
-/* CORREÇÃO AQUI: Imagem Vertical (Coca, Fotografia, Crachá) */
+/* Imagem Vertical (Coca, Fotografia, Crachá) */
 .main-banner-vertical {
-    width: auto;         /* Não força 100% da largura */
-    max-width: 100%;     /* Mas não deixa estourar a coluna */
-    max-height: 600px;   /* Limita a altura para não ficar "gigante" */
+    width: auto;
+    max-width: 100%;
+    max-height: 600px;
     height: auto;
-    margin: 0 auto;      /* Centraliza */
+    margin: 0 auto;
     border-radius: 30px;
     display: block;
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
@@ -115,7 +115,7 @@
 
 /* Slides do Carrossel */
 .slide-img {
-    min-width: 100%;     /* Garante que cada slide ocupe o container todo */
+    min-width: 100%;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -150,11 +150,11 @@
     justify-content: space-between;
     transform: translateY(-50%);
     padding: 0 15px;
-    pointer-events: none; /* Deixa clicar na imagem através da div */
+    pointer-events: none;
 }
 
 .slider-btn {
-    pointer-events: auto; /* Reativa o clique só nos botões */
+    pointer-events: auto;
     background: rgba(255, 255, 255, 0.9);
     border: none;
     width: 40px;
@@ -181,18 +181,21 @@
     cursor: zoom-in;
 }
 
-/* Vídeo */
+/* --- VÍDEO VERTICAL (CORREÇÃO DE TAMANHO) --- */
 .video-container-vertical {
     width: 100%;
-    max-width: 280px;
-    margin: 0 auto;
-    border-radius: 30px;
+    max-width: 340px;        /* Aumentado de 280px para 340px */
+    margin: 10px auto;
+    border-radius: 35px;
     overflow: hidden;
     background: #000;
+    border: 8px solid #fff; /* Borda elegante para dar destaque */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 .main-video-vertical {
     width: 100%;
+    display: block;
     aspect-ratio: 9 / 16;
     object-fit: cover;
 }
