@@ -14,10 +14,10 @@
 /* --- Navegação (Botão Voltar) --- */
 .project-nav {
     padding: 20px 25px;
-    position: fixed; /* Mudado de absolute para fixed */
+    position: fixed; 
     top: 0;
     left: 0;
-    z-index: 1001; /* Fica acima do hero */
+    z-index: 1010; /* Garante que fique acima de tudo */
 }
 .btn-back {
     display: inline-flex;
@@ -45,20 +45,25 @@
 /* 2. O Hero agora gruda no topo */
 .project-hero {
     width: 100%;
-    padding: 140px 20px 60px; 
+    padding: 140px 20px 40px; /* Reduzi um pouco o padding inferior */
     text-align: center;
-    background: rgba(255, 255, 255, 0.95); /* Leve transparência para ver o fundo */
-    backdrop-filter: blur(10px); /* Efeito de vidro desfocado ao rolar */
+    background: rgba(255, 255, 255, 0.9); 
+    backdrop-filter: blur(12px);
     border-radius: 0 0 50px 50px; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     
-    /* MÁGICA AQUI */
+    /* CONFIGURAÇÃO PARA NÃO TAPAR A TELA */
     position: sticky;
-    top: -100px; /* Ele sobe um pouco e "trava" na parte importante */
+    top: -180px; /* Esconde o topo alto e deixa só o título visível ao descer */
     z-index: 1000;
-    transition: all 0.4s ease;
+    transition: transform 0.3s ease;
 }
+
+.project-hero h1 {
+    transition: all 0.3s ease;
+}
+
 
 /* 3. Ajuste para o conteúdo não "pular" quando o hero gruda */
 #project-content {
@@ -74,6 +79,8 @@
     gap: 50px;
     margin-top: 20px;
     align-items: flex-start;
+    position: relative;
+    z-index: 1;
 }
 
 .creative-side {
@@ -88,7 +95,7 @@
 
 .sticky-content {
     position: sticky;
-    top: 30px;
+    top: 120px; /* Desce um pouco para não sumir atrás do título fixo */
 }
 
 /* --- Galeria do Processo (Onde o bicho pegava) --- */
