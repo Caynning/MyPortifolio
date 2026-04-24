@@ -155,5 +155,24 @@ const projetos = {
         bannerPrincipal: "img/cracha.jpeg", // Certifique-se de que o nome da imagem aqui esteja correto
         imagens: ["img/cracha.jpeg"], 
         corDestaque: "#3b82f6"
-    }
+    },
+
+
+    'batata-frita': {
+        titulo: "Crunchy Fries Promo",
+        cliente: "Empresa Fictícia (Projeto Autoral)",
+        categoria: "Audiovisual",
+        tipo: "video", // Importante ser 'video'
+        videoUrl: "videos/batata-promo.mp4", // O caminho do seu arquivo
+        corDestaque: "#E63946", // Um vermelho batata frita
+        papel: "Direção Criativa, Roteiro e Edição",
+        descricao: "Criação de um vídeo curto promocional focado em despertar o desejo visual (food porn) através de cortes rápidos e trilha sonora rítmica.",
+        estrategiaVisual: "Utilizei cores quentes (vermelho e amarelo) para estimular o apetite e apliquei técnicas de edição do CapCut para sincronizar as batidas da música com o surgimento do produto.",
+        entregáveis: [
+            "Vídeo vertical 9:16",
+            "Criação de identidade visual da marca fictícia",
+            "Copywriting para legenda de redes sociais"
+        ]
+    },
+    
 };

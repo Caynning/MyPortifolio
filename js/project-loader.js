@@ -7,28 +7,38 @@ window.onload = function() {
         document.title = `${data.titulo} | Letícia Soares`;
         const container = document.getElementById('project-content');
 
-        // Lógica para o Visual (Slide ou Imagem Única)
-        let visualContent = '';
-        if (data.tipo === 'apresentacao') {
-            visualContent = `
-                <p class="label-view">Deslize para ver os slides</p>
-                <div class="slider-container">
-                    <div class="slider-wrapper">
-                        ${data.slides.map(slide => `<img src="${slide}" class="slide-img">`).join('')}
-                    </div>
-                    <div class="slider-controls">
-                        <button class="slider-btn" onclick="moveSlider(-1)">❮</button>
-                        <button class="slider-btn" onclick="moveSlider(1)">❯</button>
-                    </div>
-                </div>
-            `;
-        } else {
-            visualContent = `
-                <p class="label-view">Peça Final</p>
-                <img src="${data.bannerPrincipal}" alt="Peça Principal" class="main-banner-img">
-            `;
-        }
+        // Lógica para o Visual (Slide, Imagem ou Vídeo)
+let visualContent = '';
 
+if (data.tipo === 'video') {
+    visualContent = `
+        <p class="label-view">Assista ao vídeo abaixo</p>
+        <div class="video-container-vertical">
+            <video controls autoplay muted loop class="main-video-vertical">
+                <source src="${data.videoUrl}" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+        </div>
+    `;
+} else if (data.tipo === 'apresentacao') {
+    visualContent = `
+        <p class="label-view">Deslize para ver os slides</p>
+        <div class="slider-container">
+            <div class="slider-wrapper">
+                ${data.slides.map(slide => `<img src="${slide}" class="slide-img">`).join('')}
+            </div>
+            <div class="slider-controls">
+                <button class="slider-btn" onclick="moveSlider(-1)">❮</button>
+                <button class="slider-btn" onclick="moveSlider(1)">❯</button>
+            </div>
+        </div>
+    `;
+} else {
+    visualContent = `
+        <p class="label-view">Peça Final</p>
+        <img src="${data.bannerPrincipal}" alt="Peça Principal" class="main-banner-img">
+    `;
+}
         // Lógica para o Público-Alvo (Só exibe se existir)
         const targetBox = (data.analise && data.analise.publico) 
             ? `<div class="target-box-mini"><h4>Público-Alvo</h4><p>${data.analise.publico}</p></div>` 

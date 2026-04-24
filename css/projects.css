@@ -317,3 +317,26 @@
     background: white;
     transform: scale(1.1);
 }
+/* Container para vídeos verticais (9:16) */
+.video-container-vertical {
+    width: 100%;
+    max-width: 320px; /* Largura aproximada de um celular no desktop */
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    background: #000;
+}
+
+.main-video-vertical {
+    width: 100%;
+    display: block;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .video-container-vertical {
+        max-width: 280px;
+    }
+}
