@@ -156,7 +156,7 @@ const projetos = {
 
 
     'batata-frita': {
-        titulo: "Crunchy Fries Promo",
+        titulo: "Batata Frita: Vídeo Promocional",
         cliente: "Empresa Fictícia (Projeto Autoral)",
         categoria: "Audiovisual",
         tipo: "video", // Importante ser 'video'
