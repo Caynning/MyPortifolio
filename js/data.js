@@ -10,7 +10,7 @@ const projetos = {
         estrategiaVisual: `Como designer deste banner acadêmico, meu objetivo foi traduzir visualmente o diagnóstico de comunicação da Coca-Cola. Trabalhei com uma paleta de cores de alto contraste para destacar pilares importantes como sustentabilidade (garrafas retornáveis) e responsabilidade social. O resultado é um material informativo que respeita o "Brand Equity" da marca enquanto apresenta novas propostas estratégicas de forma clara e profissional.`,
         descricao: `Este projeto acadêmico aprofundou-se no desafio da <strong>Coca-Cola</strong> em equilibrar sua liderança de mercado com as exigências ESG. Enquanto o grupo focou no diagnóstico estrutural, minha atuação principal foi transformar os dados em uma narrativa visual através do banner publicitário.`,
         analise: {
-            publico: "Stakeholders preocupados com sustentabilidade e consumidores da Geração Z.",
+            //publico: "Stakeholders preocupados com sustentabilidade e consumidores da Geração Z.",
             insights: "O diagnóstico revelou que a comunicação precisa ir além do produto, focando no ciclo de vida da embalagem."
         },
         entregáveis: [
@@ -163,7 +163,7 @@ const projetos = {
         videoUrl: "videos/batata-promo.mp4", // O caminho do seu arquivo
         corDestaque: "#A67B5B", // Um vermelho batata frita
         papel: "Direção Criativa, Roteiro e Edição",
-        descricao: "Criação de um vídeo promocional em formato de vertical e curto voltado ao Marketing de desejo com cortes rápidos e edição Fluída",
+        descricao: "Criação de um vídeo promocional em formato de vertical e curto voltado ao Marketing de desejo com cortes rápidos e edição fluída",
         estrategiaVisual: "Escolhi realizar uma campanha sobre batata frita. Utilizei cores quentes (vermelho e amarelo) para estimular o apetite e apliquei técnicas de edição do CapCut para sincronizar os elementos visuais com a trilha sonora. O uso de imagens de ingredientes reais e uma fonte limpa reforça a transparência e a qualidade artesanal da marca.",
         entregáveis: [
             "Vídeo vertical 9:16",
