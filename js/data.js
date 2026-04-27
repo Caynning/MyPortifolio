@@ -111,7 +111,7 @@ const projetos = {
             papel: "Diretora de Arte e Criativa",
             objetivo: "Gerar empatia e informar sobre os riscos do trabalho infantil.",
             estrategiaVisual: "Criei o conceito visual explorando o contraste direto: usei cores vibrantes típicas do carnaval em oposição a imagens e textos sóbrios baseados no ECA. O design foi pensado para chamar a atenção pela estética festiva e converter essa atenção em conscientização social séria.",
-            descricao: "Campanha focada na proteção de crianças e adolescentes. Minha função foi desenvolver toda a parte visual, transformando artigos de lei em infográficos compreensíveis e slides impactantes.",
+            descricao: "Atividade focada na resolução de uma situação problema sobre trabalho infantil. Minha função foi desenvolver toda a parte visual, transformando artigos de lei em infográficos compreensíveis e slides impactantes",
             analise: {
                 //publico: "Foliões e órgãos públicos.",
                 insights: "A normalização do trabalho infantil precisa ser combatida com informação visual clara."
