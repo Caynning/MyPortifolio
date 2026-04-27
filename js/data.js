@@ -99,7 +99,7 @@ const projetos = {
             "Participação ativa na criação do conceito do Módulo VIVA, focando em soluções para energia limpa",
             "Criação de apresentação visual (Canva)"
         ],
-        slides: ["img/viva/viva(1).jpeg", "img/viva/viva(2).jpeg", "img/viva/viva(3).jpeg", "img/viva/viva(4).jpeg", "img/viva/viva(5).jpeg", "img/viva/viva(6).jpeg", "img/viva/viva(7).jpeg", "img/viva/viva(8).jpeg", "img/viva/viva(9).jpeg"],
+        slides: ["img/viva/viva().jpeg", "img/viva/viva().jpeg", "img/viva/viva(3).jpeg", "img/viva/viva(4).jpeg", "img/viva/viva(5).jpeg", "img/viva/viva(6).jpeg", "img/viva/viva(7).jpeg", "img/viva/viva(8).jpeg", "img/viva/viva(9).jpeg"],
         corDestaque: "#10b981"
     },
 
