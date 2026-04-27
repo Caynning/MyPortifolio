@@ -95,9 +95,9 @@ const projetos = {
             insights: "Soluções simples de baixo custo geram maior engajamento social."
         },
         entregáveis: [
-            "Concepção visual do sistema modular",
-            "Design e diagramação de manual educativo",
-            "Criação de apresentação visual (Canva) e iconografia"
+            "Estruturação do material visual utilizado para a 'venda' da ideia, garantindo clareza e profissionalismo.",
+            "Participação ativa na criação do conceito do Módulo VIVA, focando em soluções para energia limpa",
+            "Criação de apresentação visual (Canva)"
         ],
         slides: ["img/viva/viva(1).jpeg", "img/viva/viva(2).jpeg", "img/viva/viva(3).jpeg", "img/viva/viva(4).jpeg", "img/viva/viva(5).jpeg", "img/viva/viva(6).jpeg", "img/viva/viva(7).jpeg", "img/viva/viva(8).jpeg", "img/viva/viva(9).jpeg"],
         corDestaque: "#10b981"
