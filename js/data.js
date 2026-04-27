@@ -51,7 +51,7 @@ const projetos = {
         tipo: "apresentacao",
         titulo: "Tabagismo Juvenil: Identidade e Rebeldia",
         categoria: "Pesquisa e Análise de Dados | Publicidade",
-cliente: "Centro Universitário das Américas (FAM)",
+        cliente: "Centro Universitário das Américas (FAM)",
     
         objetivo: "Analisar a percepção do ato de fumar como construção de identidade entre jovens de 18 a 25 anos.",
         papel: "Responsável pela Análise de Dados e Design de Apresentação",
@@ -88,8 +88,8 @@ cliente: "Centro Universitário das Américas (FAM)",
         cliente: "EchoCharge Brasil (Empresa Fictícia)",
         papel: "Lead Visual Designer do Projeto",
         objetivo: "Desenvolver um sistema modular para redução de resíduos e economia de recursos.",
-        estrategiaVisual: "Como designer, projetei a apresentação utilizando tons de verde e elementos orgânicos para reforçar o conceito de sustentabilidade. Foquei na hierarquia visual para tornar os manuais educativos e as explicações técnicas do 'Módulo VIVA' acessíveis e visualmente atraentes.",
-        descricao: "Projeto focado na criação do 'Módulo VIVA'. Atuei na criação visual do manual educativo e na estruturação dos slides, garantindo que a tecnologia sustentável fosse percebida de forma simples e intuitiva.",
+        estrategiaVisual:"Como designer, projetei a apresentação utilizando tons de verde e elementos orgânicos para reforçar o conceito de sustentabilidade. Foquei na hierarquia visual para tornar as explicações técnicas do 'Módulo VIVA' acessíveis e visualmente atraentes.",
+        descricao: "Projeto focado na criação do 'Módulo VIVA'. Atuei na criação do Módulo VIVA e na estruturação dos slides, garantindo que a tecnologia sustentável fosse percebida de forma simples e intuitiva.",
         analise: {
             publico: "Comunidade local e empresas focadas em ESG.",
             insights: "Soluções simples de baixo custo geram maior engajamento social."
