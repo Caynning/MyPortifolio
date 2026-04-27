@@ -1,5 +1,5 @@
 const projetos = {
-
+/*
     'coca-cola': {
         tipo: "unica",
         titulo: "Do Diagnóstico à Comunicação: Coca-Cola",
@@ -172,4 +172,4 @@ const projetos = {
         ]
     },
     
-};
+};*/
