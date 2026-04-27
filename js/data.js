@@ -4,7 +4,7 @@ const projetos = {
         tipo: "unica",
         titulo: "Do Diagnóstico à Comunicação: Coca-Cola",
         categoria: "Projeto de Extensão Acadêmica",
-        cliente: "Faculdade das Américas (FAM)",
+        cliente: "Centro Universitário das Américas (FAM)",
         papel: "Responsável pelo Design Visual e Peças Criativas", 
         objetivo: "Desenvolvimento de estratégias de branding sustentável e análise de comunicação integrada.",
         estrategiaVisual: `Como designer deste banner acadêmico, meu objetivo foi traduzir visualmente o diagnóstico de comunicação da Coca-Cola. Trabalhei com uma paleta de cores de alto contraste para destacar pilares importantes como sustentabilidade (garrafas retornáveis) e responsabilidade social. O resultado é um material informativo que respeita o "Brand Equity" da marca enquanto apresenta novas propostas estratégicas de forma clara e profissional.`,
@@ -29,10 +29,10 @@ const projetos = {
         tipo: "unica",
         titulo: "Luz e Sombra: Exercícios de Composição",
         categoria: "Aula de Fotografia",
-        cliente: "Centro Universitário FAM",
+        cliente: "Centro Universitário das Américas (FAM)",
         papel: "Fotógrafa e Editora Mobile",
         objetivo: "Explorar a narrativa visual através do alto contraste e da ausência de cores.",
-        estrategiaVisual: `Neste exercício acadêmico, o desafio foi despir a imagem de cores para focar exclusivamente na composição, texturas e no jogo de luz e sombra. Explorei ângulos que transformam objetos cotidianos em formas artísticas.`,
+        estrategiaVisual: `Neste exercício acadêmico, o desafio foi despir a imagem de cores para focar exclusivamente na composição, texturas e no jogo de luz e sombra. Explorei ângulos que transformam cenários cotidianos em formas artísticas.`,
         descricao: `O projeto consistiu na captura e edição de fotografias em preto e branco para treinar o "olhar publicitário", onde a composição deve guiar o espectador sem a distração das cores.`,
         analise: {
             insights: "A fotografia em P&B força o designer a entender melhor o contraste, algo fundamental para criar peças gráficas equilibradas."
@@ -40,7 +40,7 @@ const projetos = {
         entregáveis: [
             "Captação de imagens autorais (Outdoor/Indoor)",
             "Edição e tratamento de imagem mobile",
-            "Estudo de enquadramento e regra dos terços"
+            "Estudo de enquadramento"
         ],
         bannerPrincipal: "img/foto5.jpeg",
         imagens: ["img/foto1.jpeg", "img/foto3.jpeg", "img/foto4.jpeg", "img/foto2.jpeg"],
@@ -51,7 +51,7 @@ const projetos = {
         tipo: "apresentacao",
         titulo: "Tabagismo Juvenil: Identidade e Rebeldia",
         categoria: "Pesquisa e Análise de Dados | Publicidade",
-        cliente: "Faculdade das Américas (FAM)",
+cliente: "Centro Universitário das Américas (FAM)",
     
         objetivo: "Analisar a percepção do ato de fumar como construção de identidade entre jovens de 18 a 25 anos.",
         papel: "Responsável pela Análise de Dados e Design de Apresentação",
