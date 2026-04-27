@@ -163,8 +163,8 @@ const projetos = {
         videoUrl: "videos/batata-promo.mp4", // O caminho do seu arquivo
         corDestaque: "#A67B5B", // Um vermelho batata frita
         papel: "Direção Criativa, Roteiro e Edição",
-        descricao: "Criação de um vídeo curto promocional focado em Marketing de Desejo (Appetite Appeal) através de cortes rápidos...",
-estrategiaVisual: "Utilizei cores quentes (vermelho e amarelo) para estimular o apetite e apliquei técnicas de edição do CapCut para sincronizar as batidas da música com o surgimento do produto.",
+        descricao: "Criação de um vídeo promocional em formato de vertical e curto voltado ao Marketing de desejo com cortes rápidos e edição Fluída",
+        estrategiaVisual: "Escolhi realizar uma campanha sobre batata frita. Utilizei cores quentes (vermelho e amarelo) para estimular o apetite e apliquei técnicas de edição do CapCut para sincronizar os elementos visuais com a trilha sonora. O uso de imagens de ingredientes reais e uma fonte limpa reforça a transparência e a qualidade artesanal da marca.",
         entregáveis: [
             "Vídeo vertical 9:16",
             "Criação de identidade visual da marca fictícia",
