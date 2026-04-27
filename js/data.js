@@ -89,7 +89,7 @@ const projetos = {
         papel: "Lead Visual Designer do Projeto",
         objetivo: "Desenvolver um sistema modular para redução de resíduos e economia de recursos.",
         estrategiaVisual:"Como designer, projetei a apresentação utilizando tons de verde e elementos orgânicos para reforçar o conceito de sustentabilidade. Foquei na hierarquia visual para tornar as explicações técnicas do 'Módulo VIVA' acessíveis e visualmente atraentes.",
-        descricao: "Projeto focado na criação do 'Módulo VIVA'. Atuei na criação do Módulo VIVA e na estruturação dos slides, garantindo que a tecnologia sustentável fosse percebida de forma simples e intuitiva.",
+        descricao: "Projeto focado na criação de um produto inovador que traga benefícios à sociedade, meu grupo decidiu criar o 'Módulo VIVA', um produto sustentável. Atuei na criação do Módulo VIVA e na estruturação dos slides, garantindo que a tecnologia sustentável fosse percebida de forma simples e intuitiva.",
         analise: {
             publico: "Comunidade local e empresas focadas em ESG.",
             insights: "Soluções simples de baixo custo geram maior engajamento social."
