@@ -1,20 +1,3 @@
-const projetos = {
-    'coca-cola': {
-        titulo: "Coca-Cola: Diagnóstico e Sustentabilidade",
-        subtitulo: "Projeto de Extensão - Faculdade das Américas",
-        descricao: "Neste projeto de extensão, realizei um diagnóstico profundo da presença ambiental da Coca-Cola, focando em logística reversa e poluição plástica.",
-        habilidades: ["Diagnóstico de Marca", "Criação de Banner", "Análise de Logística Reversa", "Design Estratégico"],
-        imagens: ["coca1.jpg", "coca2.jpg"], // Coloque os nomes dos arquivos que ela te mandou
-        textoLongo: `
-            <p>A proposta foi unir a teoria da comunicação integrada com a prática socioambiental. 
-            Desenvolvi um banner focado na conscientização sobre o descarte de plásticos, 
-            propondo soluções criativas para problemas reais de consumo.</p>
-            <p><strong>Destaque:</strong> Utilização de softwares de edição para criar uma peça 
-            que respeita a identidade visual da marca, mas traz uma mensagem de impacto social.</p>
-        `
-    },
-    // Aqui depois você pode adicionar 'carnaval', 'lixo', etc.
-};
 
 function openModal(projetoId) {
     const data = projetos[projetoId];

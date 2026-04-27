@@ -1,7 +1,7 @@
 /* ============================================================
    PROJECT-LOADER.JS - VERSÃO CORRIGIDA (DYNAMIC TYPES)
    ============================================================ */
-/*
+
 window.onload = function() {
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
@@ -141,4 +141,4 @@ function openLightbox(src) {
 
 function closeLightbox() {
     document.getElementById('lightbox').style.display = 'none';
-}*/
+}
