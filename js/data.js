@@ -158,7 +158,7 @@ const projetos = {
     'batata-frita': {
         titulo: "Batata Frita: Vídeo Promocional",
         cliente: "Empresa Fictícia (Projeto Autoral)",
-        categoria: "Audiovisual",
+        categoria: "Audiovisual", 
         tipo: "video", // Importante ser 'video'
         videoUrl: "videos/batata-promo.mp4", // O caminho do seu arquivo
         corDestaque: "#A67B5B", // Um vermelho batata frita
