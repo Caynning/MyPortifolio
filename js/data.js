@@ -55,7 +55,7 @@ cliente: "Centro Universitário das Américas (FAM)",
     
         objetivo: "Analisar a percepção do ato de fumar como construção de identidade entre jovens de 18 a 25 anos.",
         papel: "Responsável pela Análise de Dados e Design de Apresentação",
-        estrategiaVisual: "Fui responsável pela análise dos dados e por toda a identidade visual da apresentação, utilizando uma estética 'Design Editorial Contemporâneo' com alto contraste",
+        estrategiaVisual: "Fui responsável pela análise dos dados e por toda a identidade visual da apresentação, utilizando uma estética 'Design Editorial Contemporâneo'",
         descricao: "Este estudo validou a hipótese de que o tabagismo é frequentemente visto como uma manifestação de autonomia. Minha contribuição central foi a materialização desses dados em uma apresentação executiva visualmente coesa e profissional.",
         analise: {
             /*publico: "Jovens adultos, órgãos de saúde e estrategistas de comunicação pública.",*/
