@@ -147,7 +147,7 @@ const projetos = {
             "Criação de Identidade Visual Pessoal",
             "Mapeamento de Soft Skills e competências",
             "Design de Nuvem de Palavras (Visual Thinking)",
-            "Composição de Crachá de Características Profissionais"
+            "Composição de Crachá de Características Pessoais"
         ],
         bannerPrincipal: "img/cracha.jpeg",
         // Removido o array imagens (galeria) daqui
