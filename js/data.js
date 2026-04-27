@@ -23,7 +23,7 @@ const projetos = {
         bannerPrincipal: "img/BannerCoke.png",
         imagens: ["img/IMGCoke.jpeg", "img/img3Coke.jpeg"], 
         corDestaque: "#4A5D4E"
-    },
+    }, 
 
     'fotografia': {
         tipo: "unica",
