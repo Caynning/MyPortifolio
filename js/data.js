@@ -141,7 +141,7 @@ const projetos = {
         papel: "Designer Visual e Criativa",
         objetivo: "Mapear competências comportamentais para a construção de uma marca pessoal autêntica.",
         estrategiaVisual: `O desafio foi criar uma representação visual da minha identidade profissional.`,
-        descricao: `Este projeto de autoconhecimento foi o ponto de partida para o meu branding pessoal.`,
+        descricao: `O desafio foi criar uma representação visual da minha identidade pessoal`,
         // Removido o campo analise (público-alvo) daqui
         entregáveis: [
             "Criação de Identidade Visual Pessoal",
