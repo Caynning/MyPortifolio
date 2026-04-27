@@ -58,7 +58,7 @@ cliente: "Centro Universitário das Américas (FAM)",
         estrategiaVisual: "Fui responsável pela análise dos dados e por toda a identidade visual da apresentação, utilizando uma estética 'Dark Modern' com alto contraste...",
         descricao: "Este estudo validou a hipótese de que o tabagismo é frequentemente visto como uma manifestação de autonomia. Minha contribuição central foi a materialização desses dados em uma apresentação executiva visualmente coesa e profissional.",
         analise: {
-            publico: "Jovens adultos, órgãos de saúde e estrategistas de comunicação pública.",
+            /*publico: "Jovens adultos, órgãos de saúde e estrategistas de comunicação pública.",*/
             insights: "O fumo não é visto como crescimento pessoal, mas sim como um 'escape' emocional ou comportamento social de grupo."
         },
         entregáveis: [
