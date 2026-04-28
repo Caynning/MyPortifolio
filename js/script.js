@@ -1,4 +1,4 @@
-/*
+
 function openModal(projetoId) {
     const data = projetos[projetoId];
     const modal = document.getElementById('projectModal');
@@ -83,4 +83,4 @@ function abrirProjeto(id) {
 
 function fecharProjeto() {
     document.getElementById('modal-projeto').classList.remove('active');
-}*/
+}

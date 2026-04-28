@@ -1,4 +1,4 @@
-/*const projetos = {
+const projetos = {
 
     'coca-cola': {
         tipo: "unica",
@@ -172,4 +172,4 @@
         ]
     },
     
-};*/
+};
