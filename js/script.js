@@ -83,4 +83,4 @@ function abrirProjeto(id) {
 
 function fecharProjeto() {
     document.getElementById('modal-projeto').classList.remove('active');
-}
+} 
