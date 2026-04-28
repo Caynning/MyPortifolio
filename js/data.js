@@ -1,4 +1,4 @@
-const projetos = {
+/*const projetos = {
 
     'coca-cola': {
         tipo: "unica",
@@ -58,7 +58,7 @@ const projetos = {
         estrategiaVisual: "Fui responsável pela análise dos dados e por toda a identidade visual da apresentação, utilizando uma estética 'Design Editorial Contemporâneo'",
         descricao: "Este estudo validou a hipótese de que o tabagismo é frequentemente visto como uma manifestação de autonomia. Minha contribuição central foi a materialização desses dados em uma apresentação executiva visualmente coesa e profissional.",
         analise: {
-            /*publico: "Jovens adultos, órgãos de saúde e estrategistas de comunicação pública.",*/
+            //publico: "Jovens adultos, órgãos de saúde e estrategistas de comunicação pública.",
             insights: "O fumo não é visto como crescimento pessoal, mas sim como um 'escape' emocional ou comportamento social de grupo."
         },
         entregáveis: [
@@ -91,7 +91,7 @@ const projetos = {
         estrategiaVisual:"Como designer, projetei a apresentação utilizando tons de verde e elementos orgânicos para reforçar o conceito de sustentabilidade. Foquei na hierarquia visual para tornar as explicações técnicas do 'Módulo VIVA' acessíveis e visualmente atraentes.",
         descricao: "Projeto focado na criação de um produto inovador que traga benefícios à sociedade, meu grupo decidiu criar o 'Módulo VIVA', um produto sustentável. Atuei na criação do Módulo VIVA e na estruturação dos slides, garantindo que a tecnologia sustentável fosse percebida de forma simples e intuitiva.",
         analise: {
-            /*publico: "Comunidade local e empresas focadas em ESG.",*/
+            //publico: "Comunidade local e empresas focadas em ESG.",
             insights: "Soluções simples de baixo custo geram maior engajamento social."
         },
         entregáveis: [
@@ -172,4 +172,4 @@ const projetos = {
         ]
     },
     
-};
+};*/
